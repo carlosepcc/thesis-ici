@@ -1,37 +1,67 @@
-\documentclass[spanish,noloa,nolol,pagelimitmode=flex,authorshippage=ltd]{thesis} [2015/30/06 v1.0]
+\documentclass[spanish,noloa,nolol,pagelimitmode=flex,authorshippage=ltd]{thesis} [2015/07/11 v1.0.1]
 
-\addauthor{Jane Roe}
-\author{John Doe}
-\title{\LaTeXe{} thesis template for the
-   University of Computer Science}
-\ucicenter{Vertex, Interactive 3D Environments}
-\facultynum{5}
-\addtutor[Tutora]{MSc. Maybel Díaz Capote}
+	% custom commands %
+\newcommand{\uci}{Universidad de las Ciencias Informáticas }
+\newcommand{\fac}{Facultad 4 }
+\newcommand{\cdis}{Sistema de Gestión para el Proceso de Comisión Disciplinaria en la \fac de la \uci }
+\newcommand{\cdisen}{Management System for the Disciplinary Commission Process at Faculty 4 of the University of Computer Sciences }
+	
+	%	TÍTULO
+\title{Sistema de Gestión para el Proceso de Comisión Disciplinaria en la \fac de la \uci}
+\ucicenter{Línea de Investigación de Informática Aplicada a la Sociedad} \facultynum{4}
 
+	%	AUTORÍA Y TUTORÍA
+\addauthor{Ángel Luis Fumero Sánchez}
+\addauthor{Carlos Enrique Piñeiro Cárdenas}
+\addtutor{MSc. Yordankis Matos López}
+
+	%	PENSAMIENTO
 \thought{What is well set on your mind will be
  for sure well set on your lips\\
  José Martí}
+ 	
+ 	%	DEDICATORIA
 \dedicatory{To my wife, my endless love}
+
+	%	AGRADECIMIENTOS
 \acknowledgment{I am greatly indebted to
 professor John...}
 
-\abstract{Lorem ipsum dolor sit amet, consectetuer
-          adipiscing elit. Ut purus elit, vestibulum ut,
-          placerat ac, adipiscing vitae, felis. Curabitur
-          dictum gravida mauris. Nam arcu libero, nonummy
-          eget, consectetuer id, vulputate a, magna.}
-\keywords{word1, word2, word3}
+\abstract{La Universidad de las Ciencias Informáticas, controla las indisciplinas rigiéndose por la Resolución
+Ministerial No. 240 de 2007. Para lograr estos parámetros se auxilia de diferentes comisiones
+disciplinarias que hacen constar en cada expediente las normativas vigentes, disponiendo de un grupo de
+profesores y estudiantes integrados al trabajo disciplinario en sentido general. \citep{acanda_del_cristo_cdis_2018}
+Por consiguiente, la investigación se propone como tema: \cdis, y tiene como objetivo: Desarrollar un sistema que
+permita gestionar la información asociada al proceso de las comisiones disciplinarias de la Facultad 2.
+Los resultados que se avalan en la tesis se materializan a partir del desarrollo de un sistema que posibilita
+gestionar, confeccionar y estandarizar las comisiones disciplinarias en la unidad docente de manera
+organizada y controlada, eliminando los errores subjetivos que se presentan con frecuencia. Se utilizan en
+la investigación los métodos teóricos, empíricos y matemático estadísticos que permitieron analizar el
+problema propuesto, así como las herramientas y artefactos que complementan la estructura y
+organización de la propuesta investigativa.
+\paragraph{Palabras clave:}\emph{comisión disciplinaria}, \emph{expediente disciplinario}, \emph{gestión}, \emph{sistema de gestión}
+\section*{Abstract}
+The University of Informatics Sciences, controls the indisciplines governed by the Ministerial Resolution
+No. 240 of 2007. To achieve these parameters is assisted by different disciplinary committees that record
+in each file the current regulations, having a group of teachers and students integrated to disciplinary work
+in a general sense.
+Therefore, the research is proposed as a topic: "\cdisen" , and aims to: Develop a system to manage the information associated with
+the process of the disciplinary commissions of the Faculty 2.
+The results that are endorsed in the thesis materialize from the development of a system that makes it
+possible to manage, make and standardize the disciplinary commissions in the teaching unit in an
+organized and controlled manner, eliminating subjective errors that occur frequently. Theoretical, empirical
+and mathematical mathematical methods are used in the investigation that allowed to analyze the
+proposed problem, as well as the tools and artifacts that complement the structure and organization of the
+research proposal.}
+\keywords{disciplinary commission, disciplinary record, management, management system}
 
 %\input{Glossary}
 %\input{Acronyms}
 
-%\addbibresource{example.bib}
+\addbibresource{bib/ref.bib}
 
 \begin{document}
   \maketitle
-
-  % Create a separate file for each. As filenames use the
-  % ones in braces.
   \input{Introduction}
   \input{Chapter1}
   \input{Chapter2}
@@ -40,4 +70,4 @@ professor John...}
   \input{Suggestions}
   \input{Appendices}
 \end{document}
-\end{lstlisting}
+%\end{lstlisting}
