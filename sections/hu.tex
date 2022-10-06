@@ -1,0 +1,60 @@
+\section{Historias de usuario}
+\label{s:hu}
+Las HU serán representadas mediante tablas divididas por las siguientes secciones:
+\begin{description}
+
+\item Número: número de la historia de usuario incremental en el tiempo;
+\item Nombre de historia de usuario: el nombre de la historia de usuario sería para identificarlas mejor
+entre los desarrolladores y el cliente;
+\item[Usuario] El usuario que está involucrado en el desarrollo de la HU;
+\item[Iteración asignada] Número de la iteración;
+\item[Prioridad en negocio] 
+\begin{itemize}
+\item Las historias de usuarios que son de funcionalidades imprescindibles en el desarrollo del sistema tienen prioridad alta;
+\item Las historias de usuarios que son de funcionalidades que debe de tener el sistema, pero que
+no son necesarias para su funcionamiento, tienen prioridad media;
+\item Las historias de usuarios que son de funcionalidades auxiliares y que son independientes del
+sistema, tienen prioridad baja.
+\end{itemize}
+\item Riesgo en desarrollo:
+\begin{itemize}
+\item Las historias de usuarios que, en caso de tener algún error de implementación, puedan afectar
+la disponibilidad del sistema, tienen riesgo de desarrollo alto;
+\item Las historias de usuarios que puedan presentar errores y retrasan la entrega de la versión,
+tienen riesgo de desarrollo medio;
+\item Las historias de usuario que puedan presentar errores, pero estos son tratados con facilidad y
+no afectan en desarrollo del proyecto, tienen riesgo de desarrollo bajo.
+\end{itemize}
+\item[Puntos estimados] tiempo estimado que se demorará el desarrollo de la HU;
+\item[Descripción] breve descripción de la HU;
+\item[Observaciones] señalamiento o advertencia del sistema;
+\item[Prototipo de interfaz] prototipo de interfaz si aplica.
+\end{description} \citep{Joskowicz2008}
+
+
+Los títulos de las HU generadas son:
+\begin{enumerate}[label=HU \arabic*:]
+\item  Autenticar usuario.
+\item  Gestionar usuario.
+\item  Mostrar reportes al asesor.
+\item  Gestionar denuncias.
+\item  Mostrar clasificación de las faltas.
+\item  Gestionar comisiones disciplinarias.
+\item  Gestionar expediente disciplinario.
+\item  Gestionar dictámenes.
+\item  Gestionar prórroga.
+\item  Gestionar circunstancias modificativas.
+\item  Exportar a PDF.
+\end{enumerate}
+A continuación se presentan las historias de usuarios identificadas en la investigación
+\begin{userstory}
+	\storyname{Crear denuncia}
+	\storyuser{\userY}
+	\storyiter{1}
+	\storypriority{ High }
+	\storyrisk{ Low }
+	\storypoints{0.8}
+	\storyprogrammer{\authorA }
+	\storydescription{}
+	\storyobservation{\lipsum[1]}
+\end{userstory}
