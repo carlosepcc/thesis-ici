@@ -8,17 +8,37 @@ A continuación, se muestran algunas de las tareas de ingeniería:
 
 Dentro de la primera iteración se encuentran las funcionalidades de ``Crear denuncia'' y  ``Modificar denuncia'', correspondientes a las historias de usuario 1 y 2. Las tareas definidas para la iteración son:
 
-\begin{itemize}
-	\item Tarea N.1: Cargar.
-\end{itemize}
+\begin{tasks}[label*=Tarea N.\arabic*:]
+	\item Implementar Crear denuncia.
+\end{tasks}
 
 \begin{engineeringtask}
 	\engtaskuserstory {1}
-	\engtaskname {Crear denuncia}
+	\engtaskname {Implementar Crear denuncia}
 	\engtasktype {Desarrollo}
+	\engtaskpointestimation {1}
+	\engtaskstartdate {3}{9}{2022} % day , month , year
+	\engtaskenddate {8}{9}{2022}
+	\engtaskdescription {Implementar métodos que permitan crear una nueva denuncia y registrarla en la base de datos.}
+	\engtaskprogrammer {\authorA}
+\end{engineeringtask}
+\begin{engineeringtask}
+	\engtaskuserstory {1}
+	\engtaskname {Diseñar GUI Crear denuncia}
+	\engtasktype {Diseño}
 	\engtaskpointestimation {0.2}
 	\engtaskstartdate {2}{9}{2022} % day , month , year
-	\engtaskenddate {5}{9}{2022}
-	\engtaskdescription {Crear método que sea capaz de crear una denuncia}
-	\engtaskprogrammer {\authorA}
+	\engtaskenddate {3}{9}{2022}
+	\engtaskdescription {Diseñar una interfaz gráfica de usuario que permita crear una denuncia.}
+	\engtaskprogrammer {\authorC}
+\end{engineeringtask}
+\begin{engineeringtask}
+	\engtaskuserstory {1}
+	\engtaskname {Implementar \ac{gui} Crear denuncia}
+	\engtasktype {Desarrollo}
+	\engtaskpointestimation {0.4}
+	\engtaskstartdate {4}{9}{2022} % day , month , year
+	\engtaskenddate {6}{9}{2022}
+	\engtaskdescription {Implementar la interfaz gráfica de usuario que permite crear una denuncia.}
+	\engtaskprogrammer {\authorC}
 \end{engineeringtask}

@@ -3,58 +3,78 @@
 Las HU serán representadas mediante tablas divididas por las siguientes secciones:
 \begin{description}
 
-\item Número: número de la historia de usuario incremental en el tiempo;
-\item Nombre de historia de usuario: el nombre de la historia de usuario sería para identificarlas mejor
+\item [Número] Identificador entero incremental en el tiempo;
+\item [Nombre de historia de usuario] Identificador alfanumérico para su uso 
 entre los desarrolladores y el cliente;
-\item[Usuario] El usuario que está involucrado en el desarrollo de la HU;
-\item[Iteración asignada] Número de la iteración;
-\item[Prioridad en negocio] 
-\begin{itemize}
-\item Las historias de usuarios que son de funcionalidades imprescindibles en el desarrollo del sistema tienen prioridad alta;
-\item Las historias de usuarios que son de funcionalidades que debe de tener el sistema, pero que
-no son necesarias para su funcionamiento, tienen prioridad media;
-\item Las historias de usuarios que son de funcionalidades auxiliares y que son independientes del
-sistema, tienen prioridad baja.
-\end{itemize}
-\item Riesgo en desarrollo:
-\begin{itemize}
-\item Las historias de usuarios que, en caso de tener algún error de implementación, puedan afectar
-la disponibilidad del sistema, tienen riesgo de desarrollo alto;
-\item Las historias de usuarios que puedan presentar errores y retrasan la entrega de la versión,
-tienen riesgo de desarrollo medio;
-\item Las historias de usuario que puedan presentar errores, pero estos son tratados con facilidad y
-no afectan en desarrollo del proyecto, tienen riesgo de desarrollo bajo.
-\end{itemize}
-\item[Puntos estimados] tiempo estimado que se demorará el desarrollo de la HU;
-\item[Descripción] breve descripción de la HU;
-\item[Observaciones] señalamiento o advertencia del sistema;
-\item[Prototipo de interfaz] prototipo de interfaz si aplica.
+\item[Usuario] Nombre y apellidos de la persona involucrada en el desarrollo de la \ac{hu};
+\item[Iteración asignada] Identificador entero perteneciente a la iteración en la cual se planea implementar la funcionalidad descrita en la \ac{hu};
+\item[Prioridad en negocio] Las historias de usuarios que describen funcionalidades imprescindibles en el desarrollo del sistema tienen prioridad alta; aquellas que debe tener el sistema, pero que no son necesarias para su funcionamiento, prioridad media; y auxiliares y que son independientes del sistema, prioridad baja.
+\item[Riesgo en desarrollo] Las historias de usuarios que, en caso de tener algún error de implementación, puedan afectar la disponibilidad del sistema, tienen un riesgo de desarrollo alto; las \ac{hu} que puedan presentar errores y retrasan la entrega de la versión tienen riesgo de desarrollo medio; y las que puedan presentar errores, pero estos son tratados con facilidad y no afectan en desarrollo del proyecto, tienen riesgo de desarrollo bajo.
+
+\item[Puntos estimados] Tiempo estimado que tardará el desarrollo de la \ac{hu};
+\item[Descripción] Breve descripción de \ac{hu};
+\item[Observaciones] Señalamiento o advertencia del sistema;
+\item[Prototipo de interfaz] Prototipo de interfaz si aplica.
 \end{description} \citep{Joskowicz2008}
 
 
-Los títulos de las HU generadas son:
+Los títulos de las \ac{hu} generadas son:
 \begin{enumerate}[label=HU \arabic*:]
-\item  Autenticar usuario.
-\item  Gestionar usuario.
-\item  Mostrar reportes al asesor.
-\item  Gestionar denuncias.
-\item  Mostrar clasificación de las faltas.
-\item  Gestionar comisiones disciplinarias.
-\item  Gestionar expediente disciplinario.
-\item  Gestionar dictámenes.
-\item  Gestionar prórroga.
-\item  Gestionar circunstancias modificativas.
-\item  Exportar a PDF.
+\item Autenticar usuario.
+\item Crear denuncia
+\item Actualizar denuncia
+\item Eliminar denuncia
+\item Crear resolución
+\item Exportar resolución.
 \end{enumerate}
 A continuación se presentan las historias de usuarios identificadas en la investigación
 \begin{userstory}
 	\storyname{Crear denuncia}
-	\storyuser{\userY}
+	\storyuser{\authorA}
+	\storyiter{1}
+	\storypriority{ High }
+	\storyrisk{ Low }
+	\storypoints{1}
+	\storyprogrammer{\authorA }
+	\storydescription{El sistema debe permitir registrar una denuncia en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva denuncia y botones para registrarla en el sistema o cancelar la acción.
+	Los datos a ingresar en el formulario deben ser:
+		\begin{itemize}
+		\item Fecha y hora de los hechos
+		\item Estudiantes involucrados
+		\item Descripción
+		\item Adjuntos
+		\end{itemize}}
+	\storyobservation{Para registrar una denuncia también se necesita la información del denunciante y la fecha de la denuncia, pero se debe tomar el usuario autenticado como denunciante y la fecha de creación de la denuncia en el sistema y no es necesario mostrar campos para esa información en el formulario }
+\end{userstory}
+\begin{userstory}
+	\storyname{Crear comisión disciplinaria}
+	\storyuser{\authorA}
+	\storyiter{1}
+	\storypriority{ High }
+	\storyrisk{ Low }
+	\storypoints{1}
+	\storyprogrammer{\authorA }
+	\storydescription{El sistema debe permitir registrar una comisión disciplinaria en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva comisión disciplinaria y botones para registrarla en el sistema o cancelar la acción.
+	Los datos a ingresar en el formulario deben ser:
+		\begin{itemize}
+		\item Presidente de comisión
+		\item Secretario de comisión
+		\end{itemize}}
+	\storyobservation{Para registrar una comisión también se necesita la información de la resolución a la que pertenece, pero, si se permite crear las comisiones en el formulario que se brinda para registrar o modificar una resolución decanal, se debe tomar la resolución a crear o editar como resolución a la que pertenece la comisión creada}
+\end{userstory}
+\begin{userstory}
+	\storyname{Crear resolución}
+	\storyuser{\authorA}
 	\storyiter{1}
 	\storypriority{ High }
 	\storyrisk{ Low }
 	\storypoints{0.8}
 	\storyprogrammer{\authorA }
-	\storydescription{}
-	\storyobservation{\lipsum[1]}
+	\storydescription{El sistema debe permitir registrar una resolución decanal en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva resolución decanal y botones para registrarla en el sistema o cancelar la acción.
+	Los datos a ingresar en el formulario deben ser:
+		\begin{itemize}
+		\item Curso
+		\item Comisiones disciplinarias
+		\end{itemize}}
+	\storyobservation{Para registrar una resolución decanal también se necesita la información del decano que la emite, pero se debe tomar el usuario autenticado como decano que emite la resolución decanal.}
 \end{userstory}
