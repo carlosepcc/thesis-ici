@@ -32,17 +32,18 @@ A continuación se presentan las historias de usuarios identificadas en la invest
 	\storyname{Crear denuncia}
 	\storyuser{\authorA}
 	\storyiter{1}
-	\storypriority{ High }
-	\storyrisk{ Low }
+	\storypriority{ Alta }
+	\storyrisk{ Bajo }
 	\storypoints{1}
 	\storyprogrammer{\authorA }
 	\storydescription{El sistema debe permitir registrar una denuncia en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva denuncia y botones para registrarla en el sistema o cancelar la acción.
 	Los datos a ingresar en el formulario deben ser:
 		\begin{itemize}
-		\item Fecha y hora de los hechos
 		\item Estudiantes involucrados
+		\item Fecha de ocurrencia de los hechos descritos en la denuncia
+		\item Hora de ocurrencia de los hechos descritos en la denuncia
 		\item Descripción
-		\item Adjuntos
+		\item Adjuntos (\textit{opcional})
 		\end{itemize}}
 	\storyobservation{Para registrar una denuncia también se necesita la información del denunciante y la fecha de la denuncia, pero se debe tomar el usuario autenticado como denunciante y la fecha de creación de la denuncia en el sistema y no es necesario mostrar campos para esa información en el formulario }
 \end{userstory}
@@ -50,11 +51,11 @@ A continuación se presentan las historias de usuarios identificadas en la invest
 	\storyname{Crear comisión disciplinaria}
 	\storyuser{\authorA}
 	\storyiter{1}
-	\storypriority{ High }
-	\storyrisk{ Low }
+	\storypriority{ Alta }
+	\storyrisk{ Medio }
 	\storypoints{1}
 	\storyprogrammer{\authorA }
-	\storydescription{El sistema debe permitir registrar una comisión disciplinaria en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva comisión disciplinaria y botones para registrarla en el sistema o cancelar la acción.
+	\storydescription{El sistema debe permitir registrar una comisión disciplinaria. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva comisión disciplinaria y botones para registrarla en el sistema o cancelar la acción.
 	Los datos a ingresar en el formulario deben ser:
 		\begin{itemize}
 		\item Presidente de comisión
@@ -66,14 +67,14 @@ A continuación se presentan las historias de usuarios identificadas en la invest
 	\storyname{Crear resolución}
 	\storyuser{\authorA}
 	\storyiter{1}
-	\storypriority{ High }
-	\storyrisk{ Low }
+	\storypriority{ Alta }
+	\storyrisk{ Bajo }
 	\storypoints{0.8}
-	\storyprogrammer{\authorA }
+	\storyprogrammer{\authorA}
 	\storydescription{El sistema debe permitir registrar una resolución decanal en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva resolución decanal y botones para registrarla en el sistema o cancelar la acción.
 	Los datos a ingresar en el formulario deben ser:
 		\begin{itemize}
-		\item Curso
+		\item Curso. Puede ser un número correspondiente al año o una cCadena de caracteres que lo identifica.
 		\item Comisiones disciplinarias
 		\end{itemize}}
 	\storyobservation{Para registrar una resolución decanal también se necesita la información del decano que la emite, pero se debe tomar el usuario autenticado como decano que emite la resolución decanal.}
