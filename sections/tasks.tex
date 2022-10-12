@@ -1,17 +1,30 @@
 \section{Tareas de Ingeniería}
 La metodología de software XP plantea que la implementación de un software se hace iterativamente.
-Durante cada iteración se desarrollan un conjunto de HU definidas por el cliente y descritas por el equipo de desarrollo. En esta fase de implementación las HU se dividen en tareas de ingeniería, las cuales son asignadas a los programadores para ser implementadas durante la iteración correspondiente \citep{Joskowicz2008}.\\
-A continuación, se muestran algunas de las tareas de ingeniería:
+Durante cada iteración se desarrollan un conjunto de \ac{hu} definidas por el cliente y descritas por el equipo de desarrollo. En esta fase de implementación las \ac{hu} se dividen en tareas de ingeniería, las cuales son asignadas a los programadores para ser implementadas durante la iteración correspondiente \citep{Joskowicz2008}.\\
+A continuación, se muestran algunas de las tareas de ingeniería a realizar:
 
 
 \subsection{Iteración I}
 
 Dentro de la primera iteración se encuentran las funcionalidades de ``Crear denuncia'' y  ``Modificar denuncia'', correspondientes a las historias de usuario 1 y 2. Las tareas definidas para la iteración son:
 
-\begin{tasks}[label*=Tarea N.\arabic*:]
+\begin{tasks}
+	\item Diseñar distribución principal de la \ac{gui} del cliente.
+	\item Implenmentar distribución principal de la \ac{gui} del cliente.
+	\item Diseñar Crear denuncia
 	\item Implementar Crear denuncia.
 \end{tasks}
 
+\begin{engineeringtask}
+	\engtaskuserstory {1}
+	\engtaskname {Diseñar distribución principal de la \ac{gui} del cliente.}
+	\engtasktype {Diseño}
+	\engtaskpointestimation {0.2}
+	\engtaskstartdate {2}{9}{2022} % day , month , year
+	\engtaskenddate {3}{9}{2022}
+	\engtaskdescription {Diseñar una interfaz gráfica de usuario general que siempre estará visible para acceder a las principales funciones.}
+	\engtaskprogrammer {\authorC}
+\end{engineeringtask}
 \begin{engineeringtask}
 	\engtaskuserstory {1}
 	\engtaskname {Implementar Crear denuncia}

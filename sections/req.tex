@@ -1,70 +1,81 @@
-%\section{Requisitos}
-%\subsection{Requisitos funcionales}
-%\begin{RF}
-%\item Autenticar Usuario
-%\item Asignar rol a usuario
-%\\
-%\item Crear Denuncia
-%\item Modificar Denuncia
-%\item Borrar Denuncia
-%\item Buscar Denuncia
-%\\
-%\item Crear Resolución
-%\item Modificar Resolución
-%\\
-%\item Crear Comisión
-%\item Modificar Comisión
-%\item Borrar Comisión
-%\item Buscar Comisión
-%\\
-%\item Crear Rol
-%\item Modificar Rol
-%\item Borrar Rol
-%\item Buscar Rol
-%\\
-%\item Crear Declaración
-%\item Modificar Declaración
-%\item Borrar Declaración
-%\item Buscar Declaración
-%\\
-%\item Crear Caso
-%\item Modificar Caso
-%\item Buscar Caso
-%\\
-%\item Exportar Resolución decanal
-%\item Exportar Resolución
-%\item Exportar Expediente
-%\end{RF}
-%\subsection{Requisitos no funcionales}
+\section{Requisitos}\label{s:req}
 
+\subsection{Requisitos funcionales}
+En ingeniería de software, los \ac{rf} definen un sistema o sus componentes; describen la función que un software debe realizar, ya sean cálculos, manipulación de datos, procesos de negocios, entre otros.
+Ayudan además a capturar los comportamientos planificados para un sistema, este comportamiento puede ser expresado como una función, servicio o tarea que un software debe realizar~\citep{requisitos}. A continuación, se exponen los diferentes \ac{rf} planteados por el usuario:
+\begin{RF}
+\item Autenticar Usuario
+\item Asignar rol a usuario
+\\
+\item Listar denuncias
+\item Crear denuncia
+\item Modificar denuncia
+\item Eliminar denuncia
+\item Buscar denuncia
+%\item Exportar listado de denuncias
+%\item Imprimir denuncia
+%\item Imprimir listado de denuncias
+\\
+\item Listar resoluciones
+\item Crear resolución
+\item Modificar resolución
+\item Eliminar resolución
+\item Exportar resolución
+\\
+\item Listar comisiones
+\item Crear comisión
+\item Modificar comisión
+\item Eliminar comisión
+\item Buscar comisión
+\\
+\item Listar declaraciones
+\item Crear declaración
+\item Modificar declaración
+\item Eliminar declaración
+\item Buscar declaración
+%\item Exportar declaración
+\\
+\item Listar casos disciplinarios
+\item Crear caso disciplinario
+\item Modificar caso disciplinario
+\item Buscar caso disciplinario
+\\
+\item Exportar Resolución de caso
+\item Exportar Expediente
+\\
+\item Listar roles
+\item Crear rol
+\item Modificar rol
+\item Eliminar rol
+\item Buscar rol
+\end{RF}
 
-\section{Requisitos no funcionales}
-\label{s:req}
-
-Los Requerimientos No Funcionales (RNF), como su nombre sugiere, son aquellos
-requerimientos que no se refieren directamente a las funciones especóficas que proporciona el
-sistema, sino a las propiedades emergentes de óste como la fiabilidad, el tiempo de respuesta y
-la capacidad de almacenamiento. De forma alternativa definen las restricciones del sistema \citep{sommerville2011software}. Los requisitos no funcionales de la aplicación a desarrollar son:
+\subsection{Requisitos no funcionales}
+Los \ac{rnf}, como su nombre sugiere, son aquellos requerimientos que no se refieren directamente a las funciones específicas que proporciona el sistema, sino a las propiedades emergentes de este como la fiabilidad, el tiempo de respuesta y la capacidad de almacenamiento. De forma alternativa definen las restricciones del sistema \citep{sommerville2011software}.\\
+Los requisitos no funcionales de la aplicación a desarrollar son:
 \\
 \noindent Usabilidad:
 \begin{RNF}
 \item El sistema debe ser una aplicación web
-\item La interfaz del sistema debe ser intuitiva y fócil de usar
+\item La interfaz del sistema debe ser intuitiva y fácil de usar
 \end{RNF}
 Hardware y software:
 \begin{RNF}[resume]
-\item El sistema operativo del servidor debe tener instalado la móquina virtual de Java 
-\item El ordenador donde se ejecute el servidor debe poseer como mónimo 4 GB de RAM y 10 GB de almacenamiento
-\item El cliente del sistema se podró ejecutar en cualquier sistema operativo que posea un navegador web
+\item El sistema operativo del servidor debe tener instalado la máquina virtual de Java 
+\item El ordenador donde se ejecute el servidor debe poseer como mínimo 4GB de \ac{ram} y 10GB de almacenamiento.
+\item El cliente del sistema se podrá ejecutar en los principales navegadores web: Google Chrome y navegadores basados en \gls{chromium}, Mozilla Firefox y Safari.
 \end{RNF}
 Seguridad:
 \begin{RNF}[resume]
-\item Solo se podró acceder al sistema despuós de estar autenticado con usuario y contraseía vólidos
-\item Solo se podrón usar las funcionalidades del sistema en dependencia de si el usuario autenticado posee los permisos requeridos para la misma
+\item Solo se podrá acceder al sistema después de estar autenticado con usuario y contraseña vólidos
+\item Solo se podrán usar las funcionalidades del sistema en dependencia de si el usuario autenticado posee los permisos requeridos para la misma
 \end{RNF}
 Diseño e implementación:
 \begin{RNF}[resume]
-\item Para el desarrollo del lado del cliente se usará VueJS
-\item Para el desarrollo del lado del servidor se usará Java con SpringBoot
-\item Usar la metodología de desarrollo de softwar\ac{xp}
+\item Usar JavaScript como lenguaje de programación del lado del cliente.
+%\item Usar VueJS como marco de trabajo de desarrollo del lado del cliente.
+\item Usar Java como lenguaje de programación del lado del servidor.
+\item Usar Spring Boot como \gls{framework} de desarrollo del lado del servidor.
+
+\item Usar la metodología de desarrollo de software \ac{xp}
 \end{RNF}
