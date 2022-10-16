@@ -1,17 +1,78 @@
 \section{Tarjetas CRC}\label{crc}
 
-\begin{crccard}[tb:mytable]
-    \crcclass{GeneticAlgorithm}
+\begin{crccard}
+   \crcclass{DenunciaController}
+   \crcresp{
+      \begin{itemize}
+         \item Crear una denuncia
+         \item Mostrar la denuncia requerida
+         \item Eliminar una denuncia
+      \end{itemize}
+   }
+   \crccolab{
+      UsuarioService\\
+      DenunciaService\\
+      Convertidor\\
+      SesionDetails\\
+      ValidatorDenuncia\\
+      Mensaje\\
+      JsonCrearDenuncia\\
+      JsonModificarDenuncia\\
+      JsonBorrarDenuncia\\
+   }
+\end{crccard}
+\begin{crccard}
+\crcclass{ComisionController}
     \crcresp{
        \begin{itemize}
-          \item Create gens
-          \item Create mutation
-          \item Create recombination
+          \item Mostrar las comisiones existentes
+          \item Modificar una comisión
+          \item Eliminar una comisión
        \end{itemize}
     }
    \crccolab{
-      Population\\
-      ProbabilityOperator\\
+      ResolucionService\\
+      ComisionService\\
+      UsuarioService\\
+     RolService\\
+     ComisionUsuarioService\\
+    Mensaje\\
+    ValidatorComision\\
+   ComisionUsuario\\
+   UsuarioRol\\
+JsonModificarComision\\
+Comision\\
+ComisionUsuarioPK\\
+JsonBorrarComision\\
    }
  \end{crccard}
-.
+ 
+\begin{crccard}
+   \crcclass{CasoController}
+    \crcresp{
+       \begin{itemize}
+          \item Crear el caso que asocia una comisión con una denuncia
+          \item Crear el dictamen que emite dicho caso al finalizar
+          \item Mostrar el listado de casos
+          \item Editar un caso requerido
+         \item Eliminar un caso no deseado
+       \end{itemize}
+    }
+   \crccolab{
+      GestionarFicheros\\
+      DenunciaService\\
+      ComisionService\\
+     CasoService\\
+     Convertidor\\
+    Mensaje\\
+    SesionDetails\\
+   ValidatorCaso\\
+   JsonCrearCaso\\
+Caso\\
+Denuncia\\
+JsonCrearDictamen\\
+JsonModificarCaso\\
+CasoPK\\
+JsonBorrarCasos\\
+   }
+ \end{crccard}
