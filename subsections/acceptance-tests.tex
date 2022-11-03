@@ -1,0 +1,19 @@
+\subsection{Pruebas de aceptación}
+Las pruebas de aceptación son definidas por el usuario del sistema y preparadas por el equipo de desarrollo, aunque la ejecución y aprobación final corresponden al usuario. Estas pruebas van dirigidas a comprobar que el sistema cumple los requisitos de funcionamiento esperado, recogidos en el catálogo de requisitos y en los criterios de aceptación del sistema de información, y conseguir así? la aceptación final del sistema por parte del usuario \citep{gutierrez2006pruebas}.
+A continuación se muestran algunas de las pruebas de aceptación realizadas. 
+
+\begin{acceptancetest}[t:expresult] % label in brackets
+   \testcasecode{HU1\_P1}
+   \testcasedescription{Prueba que sólo se puede acceder a las funcionalidades del sistema si se ha realizado una autenticación exitosa primero}
+   \testcaseexeccond{No existen datos de un usuario autenticado en el sistema.}
+   \testcaseexecstep{
+   \begin{enumerate}
+   \item Se ingresan los credenciales correctos
+   \item Se ejecuta el método de autenticación
+   \item Se muestran los elementos de la interfaz que permiten acceder a las funcionalidades del sistema.
+   \end{enumerate}
+   }
+   \testcaseexpresult{El usuario queda autenticado en el sistema si ingresan los credenciales correctos solamente.}
+   \testcasename{Autenticar usuario}
+   \testcaseuserstory{1}
+\end{acceptancetest}
