@@ -56,24 +56,24 @@ Los requisitos no funcionales de la aplicación a desarrollar son:
 \\
 \noindent Usabilidad:
 \begin{RNF}
-\item El sistema debe ser una aplicación web
-\item La interfaz del sistema debe ser intuitiva y fácil de usar
+\item El sistema debe ser usable a través de una aplicación web cliente.
+\item La interfaz del cliente debe ser intuitiva y fácil de usar.
 \end{RNF}
 Hardware y software:
 \begin{RNF}[resume]
-\item El sistema operativo del servidor debe tener instalado la máquina virtual de Java 
-\item El ordenador donde se ejecute el servidor debe poseer como mínimo 4GB de \ac{ram} y 10GB de almacenamiento.
-\item El cliente del sistema se podrá ejecutar en los principales navegadores web: Google Chrome y navegadores basados en \gls{chromium}, Mozilla Firefox y Safari.
+\item El sistema operativo del servidor debe tener instalada la máquina virtual de Java 
+\item El ordenador donde se ejecute el servidor debe poseer como mínimo 4GB de \ac{ram} y 10GB de almacenamiento libre.
+\item El cliente del sistema debe ser compatible con las últimas versiones estables de los principales navegadores web: Google Chrome, navegadores basados en \gls{chromium}, Mozilla Firefox y Safari.
 \end{RNF}
 Seguridad:
 \begin{RNF}[resume]
-\item Solo se podrá acceder al sistema después de estar autenticado con usuario y contraseña vólidos
-\item Solo se podrán usar las funcionalidades del sistema en dependencia de si el usuario autenticado posee los permisos requeridos para la misma
+\item El usuaro debe poder acceder a las funcionalidades del sistema sólo después de estar autenticado.
+\item El usuario debe poder acceder solamente a las funcionalidades permitidas de acuerdo a su rol en el sistema.
 \end{RNF}
 Diseño e implementación:
 \begin{RNF}[resume]
 \item Usar JavaScript como lenguaje de programación del lado del cliente.
-%\item Usar VueJS como marco de trabajo de desarrollo del lado del cliente.
+\item Usar VueJS como \gls{framework} de desarrollo del lado del cliente.
 \item Usar Java como lenguaje de programación del lado del servidor.
 \item Usar Spring Boot como \gls{framework} de desarrollo del lado del servidor.
 
