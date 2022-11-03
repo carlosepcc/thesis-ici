@@ -38,7 +38,12 @@ A continuación se presentan algunas de las historias de usuarios identificadas e
 	\storyprogrammer{\authorA }
 	\storydescription{El sistema debe permitir que los usuarios se autentiquen y tengan acceso sólo a las funcionalidades correspondientes a su rol.}
 	\storyobservation{}
-	\storyinterface{\includegraphics[scale=0.5]{images/prototypes/cdis-create-capture.png}}
+	\storyinterface{
+		Formulario de autenticación:\\
+		\includegraphics[scale=0.5]{images/prototypes/cdis-login-capture.png}\\
+		Información del usuario autenticado:\\
+		\includegraphics[scale=0.5]{images/prototypes/cdis-loggedin-capture.png}
+	}
 
 \end{userstory}
 
@@ -61,7 +66,9 @@ A continuación se presentan algunas de las historias de usuarios identificadas e
 		\end{itemize}}
 	\storyobservation{Para registrar una denuncia también se necesita la información del denunciante y la fecha de la denuncia, pero se debe tomar el usuario autenticado como denunciante y la fecha de creación de la denuncia en el sistema y no es necesario mostrar campos para esa información en el formulario }
 	\storyinterface{
-		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}
+		Botón de acción:\\
+		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}\\
+		Formulario:\\
 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-denuncia-capture.png}}
 
 \end{userstory}
@@ -102,6 +109,9 @@ A continuación se presentan algunas de las historias de usuarios identificadas e
 		\end{itemize}}
 	\storyobservation{Para registrar una resolución decanal también se necesita la información del decano que la emite, para ello se deben tomar los datos del usuario autenticado como decano emisor de la misma.}
 	\storyinterface{
-		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}
-		\includegraphics[scale=0.4]{images/prototypes/cdis-create-resolucion-capture.png}}
+		Botón de acción:\\
+		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}\\
+		Formulario:\\
+		\includegraphics[scale=0.4]{images/prototypes/cdis-create-resolucion-capture.png}
+		}
 \end{userstory}
