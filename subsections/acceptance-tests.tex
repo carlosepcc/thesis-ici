@@ -14,25 +14,91 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    \item Se recarga la página.
    \end{enumerate}
    }
-   \testcaseexpresult{El usuario queda autenticado en el sistema si se ingresan los credenciales correctos solamente. Se muestran los elementos de la interfaz que permiten acceder a las funcionalidades del sistema y la información del usuario autenticado justo después de culminar el proceso de autenticación.\\
-      Evaluación de la prueba: Satisfactoria}
-   \testcasename{Autenticar usuario}
+   \testcaseexpresult{El usuario queda autenticado en el sistema. Se muestran los elementos de la interfaz que permiten acceder a las funcionalidades del sistema y la información del usuario autenticado justo después de culminar el proceso de autenticación. Evaluación de la prueba: Satisfactoria}
+   \testcasename{Iniciar sesión con credenciales correctos}
    \testcaseuserstory{1}
 \end{acceptancetest}
 
 \begin{acceptancetest}[t:hu1p2] % label in brackets
    \testcasecode{HU1\_P2}
+   \testcasedescription{Prueba para la funcionalidad: Autenticar usuario. Prueba que sólo se puede acceder a las funcionalidades del sistema si se ha realizado una autenticación exitosa primero}
+   \testcaseexeccond{El usuario no está autenticado en el sistema.}
+   \testcaseexecstep{
+   \begin{enumerate}
+   \item Se navega a la página de inicio de sesión.
+   \item Se ingresan credenciales incorrectos en el formulario de autenticación.
+   \item Se inicia la autenticación a travéz del botón de acción del formulario o la tecla Enter.
+   \end{enumerate}
+   }
+   \testcaseexpresult{El usuario no queda autenticado en el sistema. Se muestra un aviso indicando que los credenciales son incorrectos. Evaluación de la prueba: Satisfactoria}
+   \testcasename{Iniciar sesión con credenciales incorrectos}
+   \testcaseuserstory{1}
+\end{acceptancetest}
+
+% 
+\begin{acceptancetest}[t:hu1p3] % label in brackets
+   \testcasecode{HU1\_P3}
+   \testcasename{Cerrar sesión}
+   \testcaseuserstory{1}
    \testcasedescription{Prueba para la funcionalidad: Autenticar usuario. Prueba que el usuario puede cerrar una sesión iniciada.}
    \testcaseexeccond{El usuario está autenticado en el sistema.}
    \testcaseexecstep{
    \begin{enumerate}
-   \item Se inicia el cierre de sesión desde el menú del cliente.
+   \item Se inicia el cierre de sesión desde el menú de usuario en la aplicación cliente.
    \item Se confirma la acción en un cuadro de diálogo.
    \item Se recarga la página.
    \end{enumerate}
    }
-   \testcaseexpresult{El usuario deja de estar autenticado en el sistema.\\
+   \testcaseexpresult{El usuario deja de estar autenticado en el sistema.
    Evaluación de la prueba: Satisfactoria}
-   \testcasename{Autenticar usuario}
-   \testcaseuserstory{1}
+\end{acceptancetest}
+
+\begin{acceptancetest}[t:hu2p1]
+   \testcasecode{HU2\_P1}
+   \testcaseuserstory{2}
+   \testcasename{Listar denuncias}
+   \testcasedescription{Prueba para la funcionalidad: Listar denuncias. Prueba que el usuario puede obtener una lista de denuncias sobre las que posee permiso de lectura solamente.}
+   \testcaseexeccond{El usuario está autenticado en el sistema.}
+   \testcaseexecstep{
+   \begin{enumerate}
+   \item Se navega hacia la página para gestión de denuncias.
+   \item Se presiona el botón de acción "Refrescar".
+   \end{enumerate}
+   }
+   \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de las denuncias a las que el usuario autenticado tiene acceso,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
+   Evaluación de la prueba: Satisfactoria}
+\end{acceptancetest}
+
+% LISTAR
+\begin{acceptancetest}[t:hu5p1]
+   \testcasecode{HU2\_P1}
+   \testcaseuserstory{2}
+   \testcasename{Listar usuarios}
+   \testcasedescription{Prueba para la funcionalidad: Listar usuarios. Prueba que el usuario puede obtener una lista de usuarios sobre los que posee permiso de lectura solamente.}
+   \testcaseexeccond{El usuario está autenticado en el sistema.}
+   \testcaseexecstep{
+   \begin{enumerate}
+   \item Se navega hacia la página para gestión de usuarios.
+   \item Se presiona el botón de acción "Refrescar".
+   \end{enumerate}
+   }
+   \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de los usuarios a los que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
+   Evaluación de la prueba: Satisfactoria}
+\end{acceptancetest}
+
+% LISTAR
+\begin{acceptancetest}[t:hu2p1]
+   \testcasecode{HU2\_P1}
+   \testcaseuserstory{2}
+   \testcasename{Listar usuarios}
+   \testcasedescription{Prueba para la funcionalidad: Listar usuarios. Prueba que el usuario puede obtener una lista de usuarios sobre los que posee permiso de lectura solamente.}
+   \testcaseexeccond{El usuario está autenticado en el sistema.}
+   \testcaseexecstep{
+   \begin{enumerate}
+   \item Se navega hacia la página para gestión de usuarios.
+   \item Se presiona el botón de acción "Refrescar".
+   \end{enumerate}
+   }
+   \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de los usuarios a los que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
+   Evaluación de la prueba: Satisfactoria}
 \end{acceptancetest}
