@@ -85,20 +85,3 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de los usuarios a los que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
    Evaluación de la prueba: Satisfactoria}
 \end{acceptancetest}
-
-% LISTAR
-\begin{acceptancetest}[t:hu2p1]
-   \testcasecode{HU2\_P1}
-   \testcaseuserstory{2}
-   \testcasename{Listar usuarios}
-   \testcasedescription{Prueba para la funcionalidad: Listar usuarios. Prueba que el usuario puede obtener una lista de usuarios sobre los que posee permiso de lectura solamente.}
-   \testcaseexeccond{El usuario está autenticado en el sistema.}
-   \testcaseexecstep{
-   \begin{enumerate}
-   \item Se navega hacia la página para gestión de usuarios.
-   \item Se presiona el botón de acción "Refrescar".
-   \end{enumerate}
-   }
-   \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de los usuarios a los que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
-   Evaluación de la prueba: Satisfactoria}
-\end{acceptancetest}

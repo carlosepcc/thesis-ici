@@ -1,0 +1,41 @@
+\section{Patrones de diseño}
+Un patrón de diseño es una abstracción de una solución en un nivel alto. Los patrones solucionan problemas que existen en muchos niveles de abstracción. Hay patrones que abarcan las distintas etapas del desarrollo \citep{giraldo2011disenosoft}.
+
+\subsection{Patrones GRASP} Lo esencial de un diseño de objetos lo constituye el diseño de las interacciones de objetos y la asignación de responsabilidades. Las decisiones que se tomen pueden influir profundamente en la extensibilidad, claridad y mantenimiento del sistema de software de objetos, además en el grado y calidad de los componentes reutilizables, por esta razón, durante el diseño se deben realizar los casos de usos con objetos basado en los \ac{grasp} \citep{giraldo2011disenosoft}. 
+\paragraph{Alta cohesión:} Es un principio evaluativo que aplica un diseñador mientras evalúa todas las decisiones de diseño. Indica la relación que existe entre los elementos de un mismo módulo. Es la medida de la relación funcional de los elementos de un módulo. El objetivo es organizar estos elementos de manera que los que tengan una mayor relación a la hora de realizar una tarea pertenezcan al mismo módulo, y los elementos no relacionados, se encuentren en módulos separados.
+\paragraph{ Bajo acoplamiento:} Impulsa la asignación de responsabilidades de manera que su localización no incremente el acoplamiento hasta un nivel que nos lleve a los resultados negativos que puede producir un acoplamiento alto. Es el grado de interdependencia entre los módulos. Un buen diseño se caracteriza por un acoplamiento mínimo, es decir, unos módulos tan independientes los unos de los otros como sea posible.
+\paragraph{ Controlador:} Proporciona guías acerca de las opciones generalmente aceptadas y adecuadas para manejar eventos. Es conveniente utilizar la misma clase controlador para todos los eventos del sistema de un caso de uso, de manera que es posible manejar la información acerca del estado del caso de uso en el controlador.
+\paragraph{ Creador:} Guía la asignación de responsabilidades relacionadas con la creación de objetos, una tarea muy común. La intención básica del patrón es encontrar un creador que necesite conectarse al objeto creado en alguna situación.
+\paragraph{ Experto:} Se utiliza con frecuencia en la asignación de responsabilidades; es un principio de guía básico que se utiliza continuamente en el diseño de objetos. Expresa la intuición común de que los objetos hacen las cosas relacionadas con la información que tienen.
+
+\subsection{Patrones GoF}
+En el año 1994, apareció el libro ``Design Patterns: Elements of Reusable Object Oriented Sofware'' escrito por los ahora famosos Gang of Four (Pandilla de los cuatro) integrada por Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides. Estos recopilaron y documentaron 23 patrones de diseño aplicados usualmente por expertos diseñadores de software orientado a objetos. Desde luego ellos no son los inventores ni los únicos involucrados, pero luego de la publicación de ese libro empezó a difundirse con más fuerza la idea de patrones de diseño. Se distinguen tres tipos de patrones GoF: patrones de comportamiento, patrones creacionales y patrones estructurales \citep{giraldo2011disenosoft}.
+
+\subsubsection{Patrones de comportamiento} Definen la comunicación e iteración entre los objetos de un sistema. El propósito de este tipo de patrón es reducir el acoplamiento entre los objetos.
+\paragraph{ Abstract Factory:} Permite trabajar con objetos de distintas familias de manera que las familias no se mezclen entre sí. Además, hace transparente el tipo de familia concreta que se esté usando.
+\paragraph{ Builder:} Abstrae el proceso de creación de un objeto complejo, centralizando dicho proceso en un único punto.
+\paragraph{ Factory Method:} Centraliza en una clase constructora la creación de objetos de un subtipo de un tipo determinado, ocultando al usuario la casuística para elegir el subtipo que crear.
+\paragraph{ Prototype:} Crea nuevos objetos clonándolos de una instancia ya existente.
+\paragraph{ Singleton:} Garantiza la existencia de una única instancia para una clase y la creación de un mecanismo de acceso global a dicha instancia.
+
+\subsubsection{Patrones creacionales} Tratan con las formas de crear instancias de objetos. El objetivo de estos patrones es de abstraer el proceso de instanciación y ocultar los detalles de cómo los objetos son creados o inicializados.
+\paragraph{ Adapter:} Adapta una interfaz para que pueda ser utilizada por una clase que de otro modo no podría utilizarla.
+\paragraph{ Bridge:} Desacopla una abstracción de su implementación.
+\paragraph{ Compositive:}  Permite tratar objetos compuestos como si se tratara de uno simple.
+\paragraph{ Decorator:} Añade funcionalidad a una clase dinámicamente.
+\paragraph{ Facade:} Provee de una interfaz unificada simple para acceder a una interfaz o grupo de interfaces de un subsistema.
+\paragraph{ Flyweigth:}  Reduce la redundancia cuando gran cantidad de objetos poseen idéntica información.
+\paragraph{ Proxy:} Mantiene un representante de un objeto.
+
+\subsubsection*{Patrones estructurales} Describen cómo clases y objetos pueden ser combinados para formar grandes estructuras y proporcionar nuevas funcionalidades. Estos objetos adicionados pueden ser incluso objetos simples u objetos compuestos.
+\paragraph{ Chain of responsability:} Permite establecer la línea que deben llevar los mensajes para que los objetos realicen la tarea indicada.
+\paragraph{ Command:} Permite encapsular una operación en un objeto, permitiendo ejecutar dicha operación sin necesidad de conocer el contenido de la misma.
+\paragraph{ Interpreter:}  Dado un lenguaje, define una gramática para dicho lenguaje, así como las herramientas necesarias para interpretarlo.
+\paragraph{ Iterator:}  Proporciona un modo de acceder secuencialmente a los elementos de un objeto agregado sin exponer su representación interna.
+\paragraph{ Mediator:}  Define un objeto para encapsular la interacción en un conjunto de objetos. Promueve un bajo acoplamiento al evitar que los objetos se refieran unos a otros explícitamente, y permite variar la interacción entre ellos de forma independiente.
+\paragraph{ Memento:}  Representa y externaliza el estado interno de un objeto sin violar la encapsulación, de forma que éste puede volver a dicho estado más tarde.
+\paragraph{ Observer:}  Define una dependencia de uno-a-muchos entre objetos, de forma que cuando un objeto cambie de estado se notifique y actualicen automáticamente todos los objetos que dependen de él.
+\paragraph{ State:} Permite que un objeto modifique su comportamiento cada vez que cambia su estado interno. Parecerá que cambia la clase del objeto.
+\paragraph{ Strategy:} Define una familia de algoritmos, encapsula uno de ellos y los hace intercambiables. Permite que un algoritmo varíe independientemente de los clientes que lo usan.
+\paragraph{ Template Method:} Define en una operación el esqueleto de un algoritmo, delegando en las subclases algunos de sus pasos. Permite que las subclases redefinan ciertos pasos del algoritmo sin cambiar su estructura.
+\paragraph{ Visitor:} Representa una operación sobre los elementos de una estructura de objetos. Permite definir una nueva operación sin cambiar las clases de los elementos sobre los que opera.
