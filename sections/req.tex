@@ -57,26 +57,17 @@ Los requisitos no funcionales de la aplicación a desarrollar son:
 \\
 \noindent Usabilidad:
 \begin{RNF}
-\item El sistema debe ser usable a través de una aplicación web cliente.
-\item La interfaz del cliente debe ser intuitiva y fácil de usar.
+\item La \ac{gui} de la aplicación cliente debe ser intuitiva y fácil de usar por cualquier persona con edad laboral y con conocimientos básicos de trabajo con software, de acuerdo a estándares modernos de diseño de \ac{gui}.
 \end{RNF}
 Hardware y software:
 \begin{RNF}[resume]
-\item El sistema operativo del servidor debe tener instalada la máquina virtual de Java 
-\item El ordenador donde se ejecute el servidor debe poseer como mínimo 4GB de \ac{ram} y 10GB de almacenamiento libre.
+\item El software debe poder funcionar en un servidor con 4GB de \ac{ram} y 10GB de almacenamiento libre.
 \item El cliente del sistema debe ser compatible con las últimas versiones estables de los principales navegadores web: Google Chrome, navegadores basados en \gls{chromium}, Mozilla Firefox y Safari.
-\end{RNF}
-Seguridad:
-\begin{RNF}[resume]
-\item El usuaro debe poder acceder a las funcionalidades del sistema sólo después de estar autenticado.
-\item El usuario debe poder acceder solamente a las funcionalidades permitidas de acuerdo a su rol en el sistema.
+%TODO Seguridad?  \item El usuario debe poder acceder a las funcionalidades del sistema sólo después de estar autenticado.
+% \item El usuario debe poder acceder solamente a las funcionalidades permitidas de acuerdo a su rol en el sistema.
 \end{RNF}
 Diseño e implementación:
 \begin{RNF}[resume]
-\item Usar JavaScript como lenguaje de programación del lado del cliente.
-\item Usar VueJS como \gls{framework} de desarrollo del lado del cliente.
-\item Usar Java como lenguaje de programación del lado del servidor.
-\item Usar Spring Boot como \gls{framework} de desarrollo del lado del servidor.
-
-\item Usar la metodología de desarrollo de software \ac{xp}
+\item El sistema debe ser usable a través de una aplicación web cliente.
+\item Se deben usar lenguajes de programación y herramientas com amplio soporte, comunidad y estabilidad.
 \end{RNF}
