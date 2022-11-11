@@ -20,50 +20,50 @@ Las HU serán representadas mediante tablas divididas por las siguientes seccione
 
 Los títulos de las \ac{hu} generadas son:
 \begin{enumerate}[label=HU \arabic*:]
-\item Autenticar Usuario
-\item Asignar rol a usuario
-\\
-\item Listar denuncias %w
-\item Crear denuncia
-\item Modificar denuncia
-\item Eliminar denuncia
-\item Buscar denuncia
-%\item Exportar listado de denuncias
-%\item Imprimir denuncia
-%\item Imprimir listado de denuncias
-\\
-\item Listar resoluciones %w
-\item Crear resolución %w
-%\item Modificar resolución 
-\item Eliminar resolución %w
-\item Exportar resolución
-\\
-\item Listar comisiones %w
-\item Crear comisión %w
-%\item Modificar comisión
-\item Eliminar comisión %w
-\item Buscar comisión %w
-\\
-\item Listar declaraciones
-\item Crear declaración
-\item Modificar declaración
-\item Eliminar declaración
-\item Buscar declaración
-%\item Exportar declaración
-\\
-\item Listar casos disciplinarios
-\item Crear caso disciplinario
-\item Modificar caso disciplinario
-\item Buscar caso disciplinario
-\\
-\item Exportar resolución de caso
-\item Exportar conclusión de la comisión
-\\
-\item Listar roles
-\item Crear rol
-\item Modificar rol
-\item Eliminar rol
-\item Buscar rol
+	\item Autenticar Usuario
+	\item Asignar rol a usuario
+	      \\
+	\item Realizar denuncia %w
+	\item Crear denuncia
+	\item Modificar denuncia
+	\item Eliminar denuncia
+	\item Buscar denuncia
+	      %\item Exportar listado de denuncias
+	      %\item Imprimir denuncia
+	      %\item Imprimir listado de denuncias
+	      \\
+	\item Listar resoluciones %w
+	\item Crear resolución %w
+	      %\item Modificar resolución 
+	\item Eliminar resolución %w
+	\item Exportar resolución
+	      \\
+	\item Listar comisiones %w
+	\item Crear comisión %w
+	      %\item Modificar comisión
+	\item Eliminar comisión %w
+	\item Buscar comisión %w
+	      \\
+	\item Listar declaraciones
+	\item Crear declaración
+	\item Modificar declaración
+	\item Eliminar declaración
+	\item Buscar declaración
+	      %\item Exportar declaración
+	      \\
+	\item Listar casos disciplinarios
+	\item Crear caso disciplinario
+	\item Modificar caso disciplinario
+	\item Buscar caso disciplinario
+	      \\
+	\item Exportar resolución de caso
+	\item Exportar conclusión de la comisión
+	      \\
+	\item Listar roles
+	\item Crear rol
+	\item Modificar rol
+	\item Eliminar rol
+	\item Buscar rol
 \end{enumerate}
 A continuación se presentan algunas de las historias de usuarios identificadas en la investigación
 \begin{userstory}
@@ -84,25 +84,16 @@ A continuación se presentan algunas de las historias de usuarios identificadas e
 	}
 
 \end{userstory}
-
 \begin{userstory}
-	\storyname{Crear denuncia}
+	\storyname{Realizar denuncia}
 	\storyuser{\authorA}
 	\storyiter{1}
 	\storypriority{ Alta }
 	\storyrisk{ Bajo }
 	\storypoints{\hpc}
 	\storyprogrammer{\authorA }
-	\storydescription{El sistema debe permitir registrar una denuncia en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva denuncia y botones para registrarla en el sistema o cancelar la acción.
-		Los datos a ingresar en el formulario deben ser:
-		\begin{itemize}
-			\item Estudiantes involucrados
-			\item Fecha de ocurrencia de los hechos descritos en la denuncia
-			\item Hora de ocurrencia de los hechos descritos en la denuncia
-			\item Descripción
-			\item Adjuntos (\textit{opcional})
-		\end{itemize}}
-	\storyobservation{Para registrar una denuncia también se necesita la información del denunciante y la fecha de la denuncia, pero se debe tomar el usuario autenticado como denunciante y la fecha de creación de la denuncia en el sistema y no es necesario mostrar campos para esa información en el formulario }
+	\storydescription{Como usuario quiero realizar denuncias a través del sistema para que así lleguen al decano rápidamente}
+	\storyobservation{}
 	\storyinterface{
 		Botón de acción:\\
 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}\\
@@ -110,6 +101,105 @@ A continuación se presentan algunas de las historias de usuarios identificadas e
 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-denuncia-capture.png}}
 
 \end{userstory}
+\begin{userstory}
+	\storyname{Listar resoluciones}
+	\storyuser{Decano}
+	\storyiter{1}
+	\storypriority{ Alta }
+	\storyrisk{ Bajo }
+	\storypoints{\hpc}
+	\storyprogrammer{\authorA }
+	\storydescription{Como Decano quiero listar las resoluciones de los casos disciplinarios para poder consultarlas en cualquier momento}
+	\storyobservation{}
+	\storyinterface{}
+\end{userstory}
+\begin{userstory}
+	\storyname{Crear resolución}
+	\storyuser{Decano}
+	\storyiter{1}
+	\storypriority{ Alta }
+	\storyrisk{ Bajo }
+	\storypoints{\hpc}
+	\storyprogrammer{\authorA }
+	\storydescription{Como decano quiero redactar resoluciones en la aplicación para tener acceso las comisiones definidad en ellas mediante el sistema.}
+	\storyobservation{}
+	\storyinterface{}
+\end{userstory}
+\begin{userstory}
+	\storyname{Visualizar denuncias}
+	\storyuser{Decano}
+	\storyiter{1}
+	\storypriority{ Alta }
+	\storyrisk{ Bajo }
+	\storypoints{\hpc}
+	\storyprogrammer{\authorA }
+	\storydescription{Como decano quiero visualizar las denuncias realizadas para poder asignarlas a las comisiones disciplinarias.}
+	\storyobservation{}
+	\storyinterface{}
+\end{userstory}
+\begin{userstory}
+	\storyname{Crear caso disciplinario}
+	\storyuser{Decano}
+	\storyiter{1}
+	\storypriority{ Alta }
+	\storyrisk{ Bajo }
+	\storypoints{\hpc}
+	\storyprogrammer{\authorA }
+	\storydescription{Como decano quiero crear casos disciplinarios para que se registre toda la información.}
+	\storyobservation{}
+	\storyinterface{}
+\end{userstory}
+\begin{userstory}
+	\storyname{Exportar resolución de caso}
+	\storyuser{Decano}
+	\storyiter{1}
+	\storypriority{ Alta }
+	\storyrisk{ Bajo }
+	\storypoints{\hpc}
+	\storyprogrammer{\authorA }
+	\storydescription{Como decano quiero exportar la resolución de un caso disciplinario para poder imprimirlo.}
+	\storyobservation{}
+	\storyinterface{}
+\end{userstory}
+\begin{userstory}
+	\storyname{Exportar conclusión de la comisión}
+	\storyuser{Presidente de comisión}
+	\storyiter{1}
+	\storypriority{ Alta }
+	\storyrisk{ Bajo }
+	\storypoints{\hpc}
+	\storyprogrammer{\authorA }
+	\storydescription{Como Presidente de comisión quiero exportar la conclusión de la comisión para poder imprimirla.}
+	\storyobservation{}
+	\storyinterface{}
+\end{userstory}
+
+
+% INFO FOR THE TASK \begin{userstory}
+% 	\storyname{Realizar denuncia}
+% 	\storyuser{\authorA}
+% 	\storyiter{1}
+% 	\storypriority{ Alta }
+% 	\storyrisk{ Bajo }
+% 	\storypoints{\hpc}
+% 	\storyprogrammer{\authorA }
+% 	\storydescription{El sistema debe permitir registrar una denuncia en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva denuncia y botones para registrarla en el sistema o cancelar la acción.
+% 		Los datos a ingresar en el formulario deben ser:
+% 		\begin{itemize}
+% 			\item Estudiantes involucrados
+% 			\item Fecha de ocurrencia de los hechos descritos en la denuncia
+% 			\item Hora de ocurrencia de los hechos descritos en la denuncia
+% 			\item Descripción
+% 			\item Adjuntos (\textit{opcional})
+% 		\end{itemize}}
+% 	\storyobservation{Para registrar una denuncia también se necesita la información del denunciante y la fecha de la denuncia, pero se debe tomar el usuario autenticado como denunciante y la fecha de creación de la denuncia en el sistema y no es necesario mostrar campos para esa información en el formulario }
+% 	\storyinterface{
+% 		Botón de acción:\\
+% 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}\\
+% 		Formulario:\\
+% 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-denuncia-capture.png}}
+
+% \end{userstory}
 % \begin{userstory}
 % 	\storyname{Crear comisión disciplinaria}
 % 	\storyuser{\authorA}
@@ -151,5 +241,5 @@ A continuación se presentan algunas de las historias de usuarios identificadas e
 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}\\
 		Formulario:\\
 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-resolucion-capture.png}
-		}
+	}
 \end{userstory}
