@@ -3,6 +3,7 @@
 %\documentclass[spanish,noloa,nolol,pagelimitmode=flex,authorshippage=ltd]{thesis} [2015/07/11 v1.0.1]
 
 	% custom commands %
+	% Estos son comandos que se pueden usar en el documento
 	
 \newcommand{\uci}{Universidad de las Ciencias Informáticas }
 \newcommand{\fac}{Facultad 4}
@@ -17,14 +18,14 @@
 \newcommand{\tutorY}{Yordankis Matos López}
 \newcommand{\userY}{Yadira Ramírez Rodríguez}
 
-% set up lists
+% set up lists 
 \newlist{RF}{enumerate}{1}
 \setlist[RF]{label=RF \arabic*:}
 \newlist{RNF}{enumerate}{1}
 \setlist[RNF]{label=RNF \arabic*:}
-\newlist{tasks}{enumerate}{1}
+\newlist{tasks} {enumerate}{1}
 \setlist[tasks]{label*=Tarea N.\arabic*:}
-	%	TÍTULO
+	%	TÍTULO 
 \title{\cdis}
 \ucicenter{Línea de Investigación de Informática Aplicada a la Sociedad} \facultynum{4}
 
@@ -47,7 +48,7 @@
 Por consiguiente, la investigación se propone como tema: ``Sistema de Gestión para el Proceso de Comisión Disciplinaria en la Facultad 4 de la Universidad de las Ciencias Informáticas (CDIS)'', y tiene como objetivo: Desarrollar un sistema que permita gestionar la información asociada al proceso de las comisiones disciplinarias de la Facultad 4.
 Los resultados que se avalan en la tesis se materializan a partir del desarrollo de un sistema que posibilita gestionar, confeccionar y estandarizar las comisiones disciplinarias en la unidad docente de manera organizada y controlada, eliminando los errores subjetivos que se presentan con frecuencia. Se utilizan en la investigación los métodos teóricos, empíricos y matemático estadísticos que permitieron analizar el problema propuesto, así como las herramientas y artefactos que complementan la estructura y organización de la propuesta investigativa.\\
 \\
-\textbf{Palabras clave:} \emph{comisión disciplinaria}, \emph{expediente disciplinario}, \emph{gestión}, \emph{sistema de gestión}.
+\textbf{Palabras clave:} \emph{Comisión Disciplinaria}, \emph{Sistema de Gestión}, \emph{Facultad 4}, \emph{Universidad de las Ciencias Informáticas}.
 \section*{Abstract}
 The University of Informatics Sciences, controls the indisciplines governed by the Ministerial Resolution
 No. 240 of 2007. To achieve these parameters is assisted by different disciplinary committees that record
@@ -57,7 +58,10 @@ Therefore, the research is proposed as a topic: ``Management System for the Disc
 the process of the disciplinary commissions of the Faculty 4.
 The results that are endorsed in the thesis materialize from the development of a system that makes it possible to manage, make and standardize the disciplinary commissions in the teaching unit in an organized and controlled manner, eliminating subjective errors that occur frequently. Theoretical, empirical and mathematical methods are used in the investigation that allowed to analyze the proposed problem, as well as the tools and artifacts that complement the structure and organization of the research proposal.
 }
-\keywords{disciplinary commission, disciplinary record, management, management system}
+\keywords{Disciplinary Commission, Management System, Faculty 4, University of Informatics Sciences.}
+
+
+	%	RESUMEN
 
 \input{Glossary}
 \input{Acronyms}
@@ -65,7 +69,7 @@ The results that are endorsed in the thesis materialize from the development of 
 \addbibresource{bib/ref.bib}
 
 \begin{document}
-\maketitle
+\maketitle 
 \input{Introduction}
 \input{Chapter1}
 \input{Chapter2}

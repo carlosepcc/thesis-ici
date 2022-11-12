@@ -1,5 +1,4 @@
 # Tareas
-
 ## Documento
 - [ ] Artefactos ingenieriles (AIs) 
     - [ ] Diagrama entidad relación
@@ -7,18 +6,17 @@
       - [ ] Colocarlo en la presentación
     - [ ] Historias de usuario (Según extremeprogramming.org son poco detalladas y con lenguaje del cliente y las tareas de desarrollo son un desglose detallados y con lenguaje técnico. Se estiman en días de programación ideales)
       - [ ] Elaborarlas 3/24
-      - [ ] Colocarlo en la presentación
+      - [ ] Colocarlas en la presentación
     - [ ] Plan de iteraciones
       - [X] ~~*Elaborarlo*~~ [2022-11-10]
       - [X] ~~*Colocarlo en la presentación*~~ [2022-11-10]
     - [ ] Tarjetas CRC
       - [ ] Elaborarlas 2/5
-      - [ ] Colocarlo en la presentación
+      - [ ] Colocarlas en la presentación
     - [ ] Modelar el negocio
       - [ ] Elaborarlo
       - [ ] Colocarlo en la presentación
     - [ ] ...
-
 
 ### Refactoring and fixes
 - [ ] Hacer más específicos los requisitos no funcionales (Especialmente el requisito acerca de la usablilidad, diseño cómodo e intuitivo)
@@ -37,14 +35,21 @@
 - [ ] Revisar referencias con nombres largos o nombres en lugar de apellidos
 - [ ] Poner nombre de metodos en CRC
 - [ ] Definir estrategia de pruebas
-- [ ] Versiones de las herramientasgestión..... Uci
+- [ ] Versiones de las herramientas
+- [ ] gestión..... Uci
 - [ ] Cambiar título de sección a Estudio del arte
 - [ ] Cambiar estuctura conceptual a secciones correlacionadas y no un glosario de términos
 - [ ] Arreglar campo de acción
 
 ## Presentación
-- [ ] Roles en singular
+- [ ] Roles en singular 
 
 ## Implementación
 - [ ] Integración con usuarios de la UCI (ldap.uci.cu | wsdl | soa-cas.uci.cu)
 - [ ] Exportación de documentos
+
+## Pruebas
+- [ ] Pruebas de aceptación
+  - [ ] Elaborarlas
+  - [ ] Colocarlas en la presentación
+  - [ ] Colocarlas en el documento

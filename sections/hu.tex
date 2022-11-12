@@ -21,69 +21,27 @@ Las HU serán representadas mediante tablas divididas por las siguientes seccione
 Los títulos de las \ac{hu} generadas son:
 \begin{enumerate}[label=HU \arabic*:]
 	\item Autenticar Usuario
-	\item Asignar rol a usuario
+	\item Listar usuarios
+	\item Asignar rol a Usuario
 	      \\
-	\item Realizar denuncia %w
-	\item Modificar denuncia
-	\item Eliminar denuncia
-	\item Buscar denuncia
-	      %\item Exportar listado de denuncias
-	      %\item Imprimir denuncia
-	      %\item Imprimir listado de denuncias
+	\item Gestionar denuncias
 	      \\
-	\item Listar resoluciones %w
-	\item Crear resolución %w
-	      %\item Modificar resolución 
-	%\item Eliminar resolución %w
-	\item Exportar resolución
+	\item Gestionar resoluciones decanales %w
+	\item Exportar resolución decanal
 	      \\
-	\item Listar comisiones %w
-	%\item Crear comisión %w
-	      %\item Modificar comisión
-	%\item Eliminar comisión %w
-	\item Buscar comisión %w
+	\item Gestionar comisiones
 	      \\
-	\item Listar declaraciones
-	\item Crear declaración
-	\item Modificar declaración
-	\item Eliminar declaración
-	\item Buscar declaración
-	      %\item Exportar declaración
+	\item Gestionar declaraciones
+	%\item Exportar declaración
 	      \\
-	\item Listar casos disciplinarios
-	\item Crear caso disciplinario
-	\item Modificar caso disciplinario
-	\item Buscar caso disciplinario
+	\item Gestionar casos disciplinarios
 	      \\
 	\item Exportar conclusión de la comisión
 	\item Exportar resolución de caso
 	      \\
-	\item Listar roles
-	\item Crear rol
-	\item Modificar rol
-	\item Eliminar rol
-	\item Buscar rol
+	\item Gestionar roles
 \end{enumerate}
 A continuación se presentan algunas de las historias de usuarios identificadas en la investigación
-
-\begin{userstory}
-	\storyname{Autenticar usuario}
-	\storyuser{Usuario}
-	\storyiter{1}
-	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpa}
-	\storyprogrammer{\authorA }
-	\storydescription{Como usuario quiero ingresar al sistema para realizar las acciones que me corresponden.}
-	\storyobservation{}
-	\storyinterface{
-		Formulario de autenticación:\\
-		\includegraphics[scale=0.5]{images/prototypes/cdis-login-capture.png}\\
-		Información del usuario autenticado:\\
-		\includegraphics[scale=0.5]{images/prototypes/cdis-loggedin-capture.png}
-	}
-
-\end{userstory}
 
 \begin{userstory}
 	\storyname{Asignar rol a usuario}
@@ -100,181 +58,3 @@ A continuación se presentan algunas de las historias de usuarios identificadas e
 		% \includegraphics[scale=0.5]{images/prototypes/cdis-assignrole-capture.png}
 	}
 \end{userstory}
-
-
-
-\begin{userstory}
-	\storyname{Realizar denuncia}
-	\storyuser{\authorA}
-	\storyiter{1}
-	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpc}
-	\storyprogrammer{\authorA }
-	\storydescription{Como usuario quiero realizar denuncias a través del sistema para que sean registradas en el mismo y entregadas automáticamente a las autoridades competentes.}
-	\storyobservation{}
-	\storyinterface{
-		Botón de acción:\\
-		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}\\
-		Formulario:\\
-		\includegraphics[scale=0.4]{images/prototypes/cdis-create-denuncia-capture.png}}
-
-\end{userstory}
-\begin{userstory}
-	\storyname{Buscar denuncia}
-	\storyuser{Usuario}
-	\storyiter{1}
-	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpb}
-	\storyprogrammer{\authorA }
-	\storydescription{Como usuario quiero filtrar denuncias para poder consultarlas.}
-	\storyobservation{}
-	\storyinterface{}
-\end{userstory}
-
-\begin{userstory}
-	\storyname{Listar resoluciones}
-	\storyuser{Decano}
-	\storyiter{1}
-	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpc}
-	\storyprogrammer{\authorA }
-	\storydescription{Como Decano quiero listar las resoluciones de los casos disciplinarios para poder consultarlas en cualquier momento}
-	\storyobservation{}
-	\storyinterface{}
-\end{userstory}
-\begin{userstory}
-	\storyname{Crear resolución}
-	\storyuser{Decano}
-	\storyiter{1}
-	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpc}
-	\storyprogrammer{\authorA }
-	\storydescription{Como decano quiero redactar resoluciones en la aplicación para tener acceso las comisiones definidad en ellas mediante el sistema.}
-	\storyobservation{}
-	\storyinterface{}
-\end{userstory}
-\begin{userstory}
-	\storyname{Consultar denuncias}
-	\storyuser{Decano}
-	\storyiter{1}
-	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpr}
-	\storyprogrammer{\authorA }
-	\storydescription{Como decano quiero consultar las denuncias realizadas para poder asignarlas a las comisiones disciplinarias.}
-	\storyobservation{}
-	\storyinterface{}
-\end{userstory}
-\begin{userstory}
-	\storyname{Crear caso disciplinario}
-	\storyuser{Decano}
-	\storyiter{1}
-	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpc}
-	\storyprogrammer{\authorA }
-	\storydescription{Como decano quiero crear casos disciplinarios para que se registre toda la información generada durante la investigación de la indisciplina.}
-	\storyobservation{}
-	\storyinterface{}
-\end{userstory}
-\begin{userstory}
-	\storyname{Exportar resolución de caso}
-	\storyuser{Decano}
-	\storyiter{3}
-	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpc}
-	\storyprogrammer{\authorA }
-	\storydescription{Como decano quiero exportar la resolución de un caso disciplinario para poder imprimirla.}
-	\storyobservation{}
-	\storyinterface{}
-\end{userstory}
-\begin{userstory}
-	\storyname{Exportar conclusión de la comisión}
-	\storyuser{Presidente de comisión}
-	\storyiter{3}
-	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpe}
-	\storyprogrammer{\authorA }
-	\storydescription{Como Presidente de comisión quiero exportar la conclusión de la comisión para poder imprimirla.}
-	\storyobservation{}
-	\storyinterface{}
-\end{userstory}
-
-
-
-
-
-% INFO FOR THE TASK \begin{userstory}
-% 	\storyname{Realizar denuncia}
-% 	\storyuser{\authorA}
-% 	\storyiter{1}
-% 	\storypriority{ Alta }
-% 	\storyrisk{ Bajo }
-% 	\storypoints{\hpc}
-% 	\storyprogrammer{\authorA }
-% 	\storydescription{El sistema debe permitir registrar una denuncia en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva denuncia y botones para registrarla en el sistema o cancelar la acción.
-% 		Los datos a ingresar en el formulario deben ser:
-% 		\begin{itemize}
-% 			\item Estudiantes involucrados
-% 			\item Fecha de ocurrencia de los hechos descritos en la denuncia
-% 			\item Hora de ocurrencia de los hechos descritos en la denuncia
-% 			\item Descripción
-% 			\item Adjuntos (\textit{opcional})
-% 		\end{itemize}}
-% 	\storyobservation{Para registrar una denuncia también se necesita la información del denunciante y la fecha de la denuncia, pero se debe tomar el usuario autenticado como denunciante y la fecha de creación de la denuncia en el sistema y no es necesario mostrar campos para esa información en el formulario }
-% 	\storyinterface{
-% 		Botón de acción:\\
-% 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}\\
-% 		Formulario:\\
-% 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-denuncia-capture.png}}
-
-% \end{userstory}
-% \begin{userstory}
-% 	\storyname{Crear comisión disciplinaria}
-% 	\storyuser{\authorA}
-% 	\storyiter{1}
-% 	\storypriority{ Alta }
-% 	\storyrisk{ Medio }
-% 	\storypoints{1}
-% 	\storyprogrammer{\authorA }
-% 	\storydescription{El sistema debe permitir registrar una comisión disciplinaria. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva comisión disciplinaria y botones para registrarla en el sistema o cancelar la acción.
-% 	Los datos a ingresar en el formulario deben ser:
-% 		\begin{itemize}
-% 		\item Presidente de comisión
-% 		\item Secretario de comisión
-% 		\end{itemize}}
-% 	\storyobservation{Para registrar una comisión también se necesita la información de la resolución a la que pertenece, pero, si se permite crear las comisiones en el formulario que se brinda para registrar o modificar una resolución decanal, se debe tomar la resolución a crear o editar como resolución a la que pertenece la comisión creada}
-% 	\storyinterface{
-% 		\includegraphics{images/prototypes/cdis-create-capture.png}
-
-% 		}
-
-% \end{userstory}
-% \begin{userstory}
-% 	\storyname{Crear resolución}
-% 	\storyuser{\authorA}
-% 	\storyiter{1}
-% 	\storypriority{ Alta }
-% 	\storyrisk{ Bajo }
-% 	\storypoints{\hpc}
-% 	\storyprogrammer{\authorA}
-% 	\storydescription{El sistema debe permitir registrar una resolución decanal en el sistema. Para ello se le debe brindar al usuario un formulario en el que ingresar los datos de la nueva resolución decanal y botones para registrarla en el sistema o cancelar la acción.
-% 		Los datos a ingresar en el formulario deben ser:
-% 		\begin{itemize}
-% 			\item Curso. Puede ser un número correspondiente al año o una cCadena de caracteres que lo identifica.
-% 			\item Comisiones disciplinarias
-% 		\end{itemize}}
-% 	\storyobservation{Para registrar una resolución decanal también se necesita la información del decano que la emite, para ello se deben tomar los datos del usuario autenticado como decano emisor de la misma.}
-% 	\storyinterface{
-% 		Botón de acción:\\
-% 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-capture.png}\\
-% 		Formulario:\\
-% 		\includegraphics[scale=0.4]{images/prototypes/cdis-create-resolucion-capture.png}
-% 	}
-% \end{userstory}
