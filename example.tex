@@ -1,4 +1,4 @@
-\documentclass[spanish,authorshippage=ltd,pagelimitmode=flex,noloa,nolol]{thesis}[2015/07/11 v1.0.1]
+\documentclass[spanish,authorshippage=ltd,pagelimitmode=flex,noloa,nolol,final]{thesis}[2015/07/11 v1.0.1]
 
 %\documentclass[spanish,noloa,nolol,pagelimitmode=flex,authorshippage=ltd]{thesis} [2015/07/11 v1.0.1]
 
@@ -17,7 +17,11 @@
 \newcommand{\authorA}{Ángel Luis Fumero Sánchez}
 \newcommand{\tutorY}{Yordankis Matos López}
 \newcommand{\userY}{Yadira Ramírez Rodríguez}
+% helpers
 
+\usepackage{tabularx}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 % set up lists 
 \newlist{RF}{enumerate}{1}
 \setlist[RF]{label=RF \arabic*:}
@@ -35,11 +39,12 @@
 \addtutor{MSc. \tutorY}
 
 	%	PENSAMIENTO
-\thought{``Lo que está definido en el juicio, será de seguro bien puesto en los labios''\\
- José Martí}
+\thought{``Obedecer siempre es duro, obedecer siempre por lo general no nos gusta a los seres humanos y obedecer es un problema de conciencia, un problema de necesidad social, un problema de orden. Y porque tenemos que vivir trabajando en sociedad, y porque no se concibe esa
+vida sin un orden y sin una disciplina social''\\
+ \textbf{Fidel Castro Ruz}}
  
 	%	DEDICATORIA
-\dedicatory{A quienes nos apoyaron.}
+\dedicatory{A quienes nos apoyaron, y a nosotros.}
 
 	%	AGRADECIMIENTOS
 \acknowledgment{Les estamos sumamente agradecidos a nuestros familiares, amigos, profesores y a rtodas las personas e instituciones que nos sirvieron de apoyo, ayuda e inspiración.}
@@ -61,15 +66,14 @@ The results that are endorsed in the thesis materialize from the development of 
 \keywords{Disciplinary Commission, Management System, Faculty 4, University of Informatics Sciences.}
 
 
-	%	RESUMEN
-
+%	RESUMEN
 \input{Glossary}
 \input{Acronyms}
 
 \addbibresource{bib/ref.bib}
 
 \begin{document}
-\maketitle 
+\maketitle
 \input{Introduction}
 \input{Chapter1}
 \input{Chapter2}

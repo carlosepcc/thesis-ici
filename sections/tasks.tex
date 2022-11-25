@@ -7,7 +7,11 @@ A continuación, se muestran algunas de las tareas de ingeniería a realizar:
 Para su desarrollo durante la primera iteración se acuerda la selección de las \ac{hu} con mayor prioridad,respetando la opinión del cliente, cuya suma del tiempo total estimado de desarrollo no exceda el tiempo acordado para las iteraciones ( 2 semanas ). A continuación los nombres de algunas de las \ac{hu} seleccionadas para la iteración junto a las tareas que, una vez implementadas satisfactoriamente, dan paso a la realización de las pruebas de aceptación:
 
 \begin{itemize}
-\item \textbf{HU4:} Realizar denuncia
+\item \textbf{HU4:} Gestionar denuncias
+\item \textbf{HU5:} Gestionar resoluciones decanales
+\item \textbf{HU7:} Gestionar comisiones
+\item \textbf{HU8:} Gestionar declaraciones
+\item \textbf{HU9:} Gestionar casos disciplinarios
 \end{itemize}
 % \begin{tasks}
 
@@ -36,12 +40,38 @@ Para su desarrollo durante la primera iteración se acuerda la selección de las \
 Para su desarrollo durante la segunda iteración se acuerda la selección de las \ac{hu} con prioridad de segundo orden,respetando la opinión del cliente, cuyo cantidad no exceda la el número de \ac{hu} que se pudieron desarrollar y probar exitosamente en la iteración anterior, lo que se conoce como velocidad de desarrollo. Luego se verifica que las cantidad de tareas total asociadas a las \ac{hu} no excede tampoco la velocidad de desarrollo de la iteración anterior. Y de esta manera se procede con todas las iteraciones siguientes. A continuación los nombres de algunas de las \ac{hu} seleccionadas para la iteración junto a las tareas que, una vez implementadas satisfactoriamente, dan paso a la realización de las pruebas de aceptación:
 
 \begin{itemize}
-	
 \item \textbf{HU1:} Autenticar usuario
 \item \textbf{HU2:} Listar usuarios
+\item \textbf{HU12:} Gestionar roles
 \item \textbf{HU3:} Asignar rol a usuario
 \end{itemize}
+%\begin{table}[]
+%\centering
+%\begin{tabular}{|ll|lll}
+%\cline{1-2}
+%\multicolumn{2}{|l|}{Tarea}                                                      &  &  &  \\ \cline{1-2}
+%\multicolumn{1}{|l|}{Número de tarea: 1}          & Número de Historia de usuario: 2 &  &  &  \\ \cline{1-2}
+%\multicolumn{2}{|l|}{Nombre de la tarea: Autenticar usuario}                                        &  &  &  \\ \cline{1-2}
+%\multicolumn{1}{|l|}{Tipo de tarea: Desarrollo} & Puntos estimados: 1            &  &  &  \\ \cline{1-2}
+%\multicolumn{1}{|l|}{Fecha de inicio: 16 de septiembre de 2022}          & Fecha de fin: 17 de septiembre de 2022                 &  &  &  \\ \cline{1-2}
+%\multicolumn{2}{|l|}{Programador responsable: \authorA}                                   &  &  &  \\ \cline{1-2}
+%\multicolumn{2}{|l|}{Descripción: Implementar la autenticación basada en JSON Web Tokens. Deben enviarse en el token los datos del usuario autenticado: Nombre de usuario: String, Nombre: String, Rol: String, Permisos: String[] <[Crear denuncia, Leer denuncia, etc.]>, Cargo: String <Profesor o Decano o Administrador o Estudiante o Trabajador o Secretario de Comunicación de la FEU de la Facultad 4, etc.>}                                                &  &  &  \\ \cline{1-2}
+%\end{tabular}
+%\end{table}
 
+%\begin{table}[]
+%\centering
+%\begin{tabular}{|ll|lll}
+%\cline{1-2}
+%\multicolumn{2}{|l|}{Tarea}                                                      &  &  &  \\ \cline{1-2}
+%\multicolumn{1}{|l|}{Número de tarea: 1}          & Número de Historia de usuario: 2 &  &  &  \\ \cline{1-2}
+%\multicolumn{2}{|l|}{Nombre de la tarea: Autenticar usuario}                                        &  &  &  \\ \cline{1-2}
+%\multicolumn{1}{|l|}{Tipo de tarea: Desarrollo} & Puntos estimados: 1            &  &  &  \\ \cline{1-2}
+%\multicolumn{1}{|l|}{Fecha de inicio: 16 de septiembre de 2022}          & Fecha de fin: 17 de septiembre de 2022                 &  &  &  \\ \cline{1-2}
+%\multicolumn{2}{|l|}{Programador responsable: \authorA}                                   &  &  &  \\ \cline{1-2}
+%\multicolumn{2}{|l|}{Descripción: }                                                &  &  &  \\ \cline{1-2}
+%\end{tabular}
+%\end{table}
 \begin{engineeringtask}[t:engtask1] % label in brackets
     \engtaskuserstory{1}
     \engtaskname{Autenticar usuario}
@@ -50,20 +80,12 @@ Para su desarrollo durante la segunda iteración se acuerda la selección de las \
     \engtaskstartdate{16}{9}{2022} % day, month, year
     \engtaskenddate{17}{9}{2022}
     \engtaskprogrammer{\authorA}
-    \engtaskdescription{
-      Implementar la autenticación basada en JSON Web Tokens (JWT). Deben enviarse en el token los datos del usuario autenticado:
-      Nombre de usuario: String
-      Nombre: String
-      Rol: String
-      Permisos: String[] <[Crear denuncia, Leer denuncia, *]>
-      Cargo: String <Profesor | Decano | Administrador | Estudiante | Trabajador | Secretario de Comunicación de la FEU de la Facultad 4 | *>
-      Sexo: String <M | F>
-      Categoría científica: String <Dr.C | M.C | Ing | Lic>
-    }
+    \engtaskdescription{Descripción: Implementar la autenticación basada en JSON Web Tokens. Deben enviarse en el token los datos del usuario autenticado:
+    Nombre de usuario: String, Nombre: String, Rol: String, Permisos: String[],}
     
  \end{engineeringtask}
 
- \begin{engineeringtask}[t:engtask1] % label in brackets
+ \begin{engineeringtask}[t:engtask1.2] % label in brackets
     \engtaskuserstory{1}
     \engtaskname{Manejo de sesión}
     \engtasktype{Desarrollo}
@@ -95,3 +117,12 @@ Para su desarrollo durante la segunda iteración se acuerda la selección de las \
 %     \devtaskdescription{La autenticación debe funcionar usando el servicio de autenticación de la universidad.}
 %     \devtaskprogrammer{\authorA}
 %  \end{developmenttask}
+
+\subsection{Iteración III}
+Para su desarrollo durante la terce iteración se acuerda la selección de las \ac{hu} con prioridad de tercer orden,respetando la opinión del cliente, cuyo cantidad no exceda la velocidad de desarrollo. Luego se verifica que las cantidad de tareas total asociadas a las \ac{hu} no excede tampoco la velocidad de desarrollo de la iteración anterior. Y de esta manera se procede con todas las iteraciones siguientes. A continuación los nombres de algunas de las \ac{hu} seleccionadas para la iteración junto a las tareas que, una vez implementadas satisfactoriamente, dan paso a la realización de las pruebas de aceptación:
+
+\begin{itemize}
+\item \textbf{HU6:} Exportar resolución decanal
+\item \textbf{HU10:} Exportar conclusión de la resolución
+\item \textbf{HU11:} Exportar resolución de caso
+\end{itemize}
