@@ -45,6 +45,7 @@
 - [ ] Cambiar título de sección a Estudio del arte
 - [ ] Cambiar estuctura conceptual a secciones correlacionadas y no un glosario de términos
 - [ ] Arreglar campo de acción
+- [ ] Poner versiones de las herramientas
 
 ## Presentación
 
