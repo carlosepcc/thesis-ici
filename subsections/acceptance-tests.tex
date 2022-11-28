@@ -53,8 +53,8 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    Evaluación de la prueba: Satisfactoria}
 \end{acceptancetest}
 
-\begin{acceptancetest}[t:hu2p1]
-   \testcasecode{HU2\_P1}
+\begin{acceptancetest}[t:hu4p1]
+   \testcasecode{HU4\_P1}
    \testcaseuserstory{2}
    \testcasename{Listar denuncias}
    \testcasedescription{Prueba para la funcionalidad: Listar denuncias. Prueba que el usuario puede obtener una lista de denuncias sobre las que posee permiso de lectura solamente.}
@@ -70,7 +70,7 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
 \end{acceptancetest}
 
 % LISTAR
-\begin{acceptancetest}[t:hu5p1]
+\begin{acceptancetest}[t:hu2p1]
    \testcasecode{HU2\_P1}
    \testcaseuserstory{2}
    \testcasename{Listar usuarios}
@@ -85,3 +85,44 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de los usuarios a los que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
    Evaluación de la prueba: Satisfactoria}
 \end{acceptancetest}
+
+% LISTAR DECLARACIONES
+\begin{acceptancetest}[t:hu8p1]
+   \testcasecode{HU8\_P1}
+   \testcaseuserstory{2}
+   \testcasename{Listar declaraciones}
+   \testcasedescription{Prueba para la funcionalidad: Listar declaraciones. Prueba que el usuario puede obtener una lista de declaraciones sobre las que posee permiso de lectura solamente.}
+   \testcaseexeccond{El usuario está autenticado en el sistema.}
+   \testcaseexecstep{
+   \begin{enumerate}
+   \item Se navega hacia la página para gestión de declaraciones.
+   \item Se presiona el botón de acción "Refrescar".
+   \end{enumerate}
+   }
+   \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de las declaraciones a las que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
+   Evaluación de la prueba: Satisfactoria}
+\end{acceptancetest}
+
+% LISTAR RESOLUCIONES
+\begin{acceptancetest}[t:hu5p1]
+   \testcasecode{HU5\_P1}
+   \testcaseuserstory{2}
+   \testcasename{Listar resoluciones}
+   \testcasedescription{Prueba para la funcionalidad: Listar resoluciones. Prueba que el usuario puede obtener una lista de resoluciones sobre las que posee permiso de lectura solamente.}
+   \testcaseexeccond{El usuario está autenticado en el sistema.}
+   \testcaseexecstep{
+   \begin{enumerate}
+   \item Se navega hacia la página para gestión de resoluciones.
+   \item Se presiona el botón de acción "Refrescar".
+   \end{enumerate}
+   }
+   \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de las resoluciones a las que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
+   Evaluación de la prueba: Satisfactoria}
+\end{acceptancetest}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=1\textwidth]{images/test/acceptance-tests-coverage.png}
+	\caption{Diagrama entidad-relación a partir del cual se genera la base de datos relacional de CDIS.}
+	\label{fig:entities}
+\end{figure}
