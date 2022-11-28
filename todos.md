@@ -54,11 +54,22 @@
 ## Implementación
 
 - [ ] Integración con usuarios de la UCI (ldap.uci.cu | wsdl | soa-cas.uci.cu)
-- [ ] Exportación de documentos
-
+- [ ] Gestionar denuncia
+  - [x] Crear
+  - [ ] Asignar comisión
+  - [ ] Asignar vocales
+  - [ ] Cambiar estado
+- [ ] Gestionar resolución decanal
+  - [x] Crear
+  - [ ] Generar y exportar PDF
+  - [x] Eliminar
+- [ ] Gestionar conclusiones
+  - [ ] Actualizar
+  - [ ] Generar y exportar PDF
+- [ ] Generar y exportar resolución de caso
 ## Pruebas
 
-- [ ] Pruebas de aceptación
-  - [ ] Elaborarlas
-  - [ ] Colocarlas en la presentación
-  - [ ] Colocarlas en el documento
+- [x] Pruebas de aceptación
+  - [x] Elaborarlas
+  - [x] Colocarlas en la presentación
+  - [x] Colocarlas en el documento
