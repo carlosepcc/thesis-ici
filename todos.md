@@ -67,9 +67,42 @@
   - [ ] Actualizar
   - [ ] Generar y exportar PDF
 - [ ] Generar y exportar resolución de caso
+
 ## Pruebas
 
 - [x] Pruebas de aceptación
   - [x] Elaborarlas
   - [x] Colocarlas en la presentación
   - [x] Colocarlas en el documento
+- [ ] Pruebas unitarias
+  - [ ] Elaborarlas 3 / 15
+  - [ ] Colocarlas en el documento
+- [ ] Pruebas de requisitos no funcionales
+  - [ ] Rendimiento con JMeter
+  - [ ] Listas de validación
+    - [ ] De seguridad
+    - [ ] De usabilidad
+
+## Señalamientos de predefensa
+
+- [ ] Tiempo estimado y tiempo real
+- [ ] Mal traducción de RUP
+- [ ] Concordancia
+- [ ] Abuso de mayúsculas
+- [ ] Prototipos en HU
+- [ ] Conceptos de sistema web, app, web, etc, no
+- [ ] Conceptos interrelacionados
+- [ ] Revisar el índice, referencias en el índice
+- [x] Estudio del arte (typo)
+- [ ] Resumen 
+  - [ ] Resultados, cantidad de funcionalidades, requisitos, pruebas
+  - [ ] Los métodos no son importantes ahí
+- [ ] Conclusiones parcicales
+- [ ] Se puede adaptar a otras facultades
+
+
+
+## Señalamientos oponente
+- [ ] Resumen
+
+- [ ] Investigar norma de citación y redacción (Norma APA)
