@@ -1,18 +1,18 @@
 \subsection{Pruebas de aceptación}
 Las pruebas de aceptación son definidas por el usuario del sistema y preparadas por el equipo de desarrollo, aunque la ejecución y aprobación final corresponden al usuario. Estas pruebas van dirigidas a comprobar que el sistema cumple los requisitos de funcionamiento esperado, recogidos en el catálogo de requisitos y en los criterios de aceptación del sistema de información, y conseguir así? la aceptación final del sistema por parte del usuario \citep{gutierrez2006pruebas}.
-A continuación se muestran algunas de las pruebas de aceptación realizadas. 
+A continuación se muestran algunas de las pruebas de aceptación realizadas.
 
 \begin{acceptancetest}[t:hu1p1] % label in brackets
    \testcasecode{HU1\_P1}
    \testcasedescription{Prueba para la funcionalidad: Autenticar usuario. Prueba que sólo se puede acceder a las funcionalidades del sistema si se ha realizado una autenticación exitosa primero}
    \testcaseexeccond{El usuario no está autenticado en el sistema.}
    \testcaseexecstep{
-   \begin{enumerate}
-   \item Se navega a la página donde se encuentra el formulario de autenticación.
-   \item Se ingresan los credenciales correctos en el formulario de autenticación.
-   \item Se inicia la autenticación a travéz del botón de acción del formulario o la tecla Enter.
-   \item Se recarga la página.
-   \end{enumerate}
+      \begin{enumerate}
+         \item Se navega a la página donde se encuentra el formulario de autenticación.
+         \item Se ingresan los credenciales correctos en el formulario de autenticación.
+         \item Se inicia la autenticación a travéz del botón de acción del formulario o la tecla Enter.
+         \item Se recarga la página.
+      \end{enumerate}
    }
    \testcaseexpresult{El usuario queda autenticado en el sistema. Se muestran los elementos de la interfaz que permiten acceder a las funcionalidades del sistema y la información del usuario autenticado justo después de culminar el proceso de autenticación. Evaluación de la prueba: Satisfactoria}
    \testcasename{Iniciar sesión con credenciales correctos}
@@ -24,11 +24,11 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    \testcasedescription{Prueba para la funcionalidad: Autenticar usuario. Prueba que sólo se puede acceder a las funcionalidades del sistema si se ha realizado una autenticación exitosa primero}
    \testcaseexeccond{El usuario no está autenticado en el sistema.}
    \testcaseexecstep{
-   \begin{enumerate}
-   \item Se navega a la página de inicio de sesión.
-   \item Se ingresan credenciales incorrectos en el formulario de autenticación.
-   \item Se inicia la autenticación a travéz del botón de acción del formulario o la tecla Enter.
-   \end{enumerate}
+      \begin{enumerate}
+         \item Se navega a la página de inicio de sesión.
+         \item Se ingresan credenciales incorrectos en el formulario de autenticación.
+         \item Se inicia la autenticación a travéz del botón de acción del formulario o la tecla Enter.
+      \end{enumerate}
    }
    \testcaseexpresult{El usuario no queda autenticado en el sistema. Se muestra un aviso indicando que los credenciales son incorrectos. Evaluación de la prueba: Satisfactoria}
    \testcasename{Iniciar sesión con credenciales incorrectos}
@@ -43,14 +43,14 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    \testcasedescription{Prueba para la funcionalidad: Autenticar usuario. Prueba que el usuario puede cerrar una sesión iniciada.}
    \testcaseexeccond{El usuario está autenticado en el sistema.}
    \testcaseexecstep{
-   \begin{enumerate}
-   \item Se inicia el cierre de sesión desde el menú de usuario en la aplicación cliente.
-   \item Se confirma la acción en un cuadro de diálogo.
-   \item Se recarga la página.
-   \end{enumerate}
+      \begin{enumerate}
+         \item Se inicia el cierre de sesión desde el menú de usuario en la aplicación cliente.
+         \item Se confirma la acción en un cuadro de diálogo.
+         \item Se recarga la página.
+      \end{enumerate}
    }
    \testcaseexpresult{El usuario deja de estar autenticado en el sistema.
-   Evaluación de la prueba: Satisfactoria}
+      Evaluación de la prueba: Satisfactoria}
 \end{acceptancetest}
 
 \begin{acceptancetest}[t:hu4p1]
@@ -60,13 +60,13 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    \testcasedescription{Prueba para la funcionalidad: Listar denuncias. Prueba que el usuario puede obtener una lista de denuncias sobre las que posee permiso de lectura solamente.}
    \testcaseexeccond{El usuario está autenticado en el sistema.}
    \testcaseexecstep{
-   \begin{enumerate}
-   \item Se navega hacia la página para gestión de denuncias.
-   \item Se presiona el botón de acción "Refrescar".
-   \end{enumerate}
+      \begin{enumerate}
+         \item Se navega hacia la página para gestión de denuncias.
+         \item Se presiona el botón de acción "Refrescar".
+      \end{enumerate}
    }
    \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de las denuncias a las que el usuario autenticado tiene acceso,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
-   Evaluación de la prueba: Satisfactoria}
+      Evaluación de la prueba: Satisfactoria}
 \end{acceptancetest}
 
 % LISTAR
@@ -77,13 +77,13 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    \testcasedescription{Prueba para la funcionalidad: Listar usuarios. Prueba que el usuario puede obtener una lista de usuarios sobre los que posee permiso de lectura solamente.}
    \testcaseexeccond{El usuario está autenticado en el sistema.}
    \testcaseexecstep{
-   \begin{enumerate}
-   \item Se navega hacia la página para gestión de usuarios.
-   \item Se presiona el botón de acción "Refrescar".
-   \end{enumerate}
+      \begin{enumerate}
+         \item Se navega hacia la página para gestión de usuarios.
+         \item Se presiona el botón de acción "Refrescar".
+      \end{enumerate}
    }
    \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de los usuarios a los que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
-   Evaluación de la prueba: Satisfactoria}
+      Evaluación de la prueba: Satisfactoria}
 \end{acceptancetest}
 
 % LISTAR DECLARACIONES
@@ -94,13 +94,13 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    \testcasedescription{Prueba para la funcionalidad: Listar declaraciones. Prueba que el usuario puede obtener una lista de declaraciones sobre las que posee permiso de lectura solamente.}
    \testcaseexeccond{El usuario está autenticado en el sistema.}
    \testcaseexecstep{
-   \begin{enumerate}
-   \item Se navega hacia la página para gestión de declaraciones.
-   \item Se presiona el botón de acción "Refrescar".
-   \end{enumerate}
+      \begin{enumerate}
+         \item Se navega hacia la página para gestión de declaraciones.
+         \item Se presiona el botón de acción "Refrescar".
+      \end{enumerate}
    }
    \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de las declaraciones a las que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
-   Evaluación de la prueba: Satisfactoria}
+      Evaluación de la prueba: Satisfactoria}
 \end{acceptancetest}
 
 % LISTAR RESOLUCIONES
@@ -111,18 +111,18 @@ A continuación se muestran algunas de las pruebas de aceptación realizadas.
    \testcasedescription{Prueba para la funcionalidad: Listar resoluciones. Prueba que el usuario puede obtener una lista de resoluciones sobre las que posee permiso de lectura solamente.}
    \testcaseexeccond{El usuario está autenticado en el sistema.}
    \testcaseexecstep{
-   \begin{enumerate}
-   \item Se navega hacia la página para gestión de resoluciones.
-   \item Se presiona el botón de acción "Refrescar".
-   \end{enumerate}
+      \begin{enumerate}
+         \item Se navega hacia la página para gestión de resoluciones.
+         \item Se presiona el botón de acción "Refrescar".
+      \end{enumerate}
    }
    \testcaseexpresult{Se muestra una tabla con filas llenas con los datos de las resoluciones a las que el usuario autenticado tiene acceso de lectura,  o vacía si no existe ninguna tupla en la base de datos que satisfaga esa condición, en cuyo caso se informa al usuario que no hay datos disponibles.
-   Evaluación de la prueba: Satisfactoria}
+      Evaluación de la prueba: Satisfactoria}
 \end{acceptancetest}
 
 \begin{figure}[htp]
-	\centering
-	\includegraphics[width=1\textwidth]{images/test/acceptance-tests-coverage.png}
-	\caption{Diagrama entidad-relación a partir del cual se genera la base de datos relacional de CDIS.}
-	\label{fig:entities}
+   \centering
+   \includegraphics[width=1\textwidth]{images/test/acceptance-tests-coverage.png}
+   \caption{Diagrama entidad-relación de la solución propuesta.}
+   \label{fig:entity}
 \end{figure}
