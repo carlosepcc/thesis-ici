@@ -1,24 +1,72 @@
 \section{Patrones de diseño}
 Un patrón de diseño es una abstracción de una solución en un nivel alto. Los patrones solucionan problemas que existen en muchos niveles de abstracción. Hay patrones que abarcan las distintas etapas del desarrollo \citep{giraldo2011disenosoft}.
 
-\subsection{Patrones GRASP} Lo esencial de un diseño de objetos lo constituye el diseño de las interacciones de objetos y la asignación de responsabilidades. Las decisiones que se tomen pueden influir profundamente en la extensibilidad, claridad y mantenimiento del sistema de software de objetos, además en el grado y calidad de los componentes reutilizables, por esta razón, durante el diseño se deben realizar los casos de usos con objetos basado en los \ac{grasp} \citep{giraldo2011disenosoft}. 
-\paragraph{Alta cohesión:} Es un principio evaluativo que aplica un diseñador mientras evalúa todas las decisiones de diseño. Indica la relación que existe entre los elementos de un mismo módulo. Es la medida de la relación funcional de los elementos de un módulo. El objetivo es organizar estos elementos de manera que los que tengan una mayor relación a la hora de realizar una tarea pertenezcan al mismo módulo, y los elementos no relacionados, se encuentren en módulos separados.
-\paragraph{ Bajo acoplamiento:} Impulsa la asignación de responsabilidades de manera que su localización no incremente el acoplamiento hasta un nivel que nos lleve a los resultados negativos que puede producir un acoplamiento alto. Es el grado de interdependencia entre los módulos. Un buen diseño se caracteriza por un acoplamiento mínimo, es decir, unos módulos tan independientes los unos de los otros como sea posible.
-\paragraph{ Controlador:} Proporciona guías acerca de las opciones generalmente aceptadas y adecuadas para manejar eventos. Es conveniente utilizar la misma clase controlador para todos los eventos del sistema de un caso de uso, de manera que es posible manejar la información acerca del estado del caso de uso en el controlador.
-\paragraph{ Creador:} Guía la asignación de responsabilidades relacionadas con la creación de objetos, una tarea muy común. La intención básica del patrón es encontrar un creador que necesite conectarse al objeto creado en alguna situación.
-\paragraph{ Experto:} Se utiliza con frecuencia en la asignación de responsabilidades; es un principio de guía básico que se utiliza continuamente en el diseño de objetos. Expresa la intuición común de que los objetos hacen las cosas relacionadas con la información que tienen.
+\subsection{Patrones GRASP} Lo esencial de un diseño de objetos lo constituye el diseño de las interacciones de objetos y la asignación de responsabilidades. Las decisiones que se tomen pueden influir profundamente en la extensibilidad, claridad y mantenimiento del sistema de software de objetos, además en el grado y calidad de los componentes reutilizables, por esta razón, durante el diseño se deben realizar los casos de usos con objetos basado en los \ac{grasp} \citep{giraldo2011disenosoft}.
+Algunos ejemplos de patrones \ac{grasp} utilizados en la implementación de la solución son los siguientes.
+
+\paragraph{Creador:}
+
+Este patrón implica que un objeto debe responsabilizarse de crear otros:
+\begin{itemize}
+    \item Si contiene o agrega varios objetos del tipo de los creados.
+    \item Si se encarga de registrar objetos del tipo de los creados.
+    \item Si utiliza mucho los objetos creados.
+    \item O si contiene los datos para crear los del tipo creados.
+\end{itemize}
+
+Demostración de uso de patrón \textbf{creador:}
+
+\includegraphics[width=0.6\textwidth]{images/patterns/creator.jpg}
+
+En la imagen anterior se demuestra el uso del patrón creador pues la
+clase ``CasoService'' hace bastante uso por medio de los métodos que
+dispone de los objetos existentes en la base de datos, hace registros de
+los mismos con frecuencia y posee los datos necesarios para crear dichos
+objetos.
+
+\paragraph{Controlador \emph{(controller)}:}
+
+Es un patrón por el cual definimos objetos llamados controladores que
+independizan las interfaces con las acciones que haya que hacer.
+
+Estos controladores tienen que ser lo más pequeños posible y numerosos,
+aislando todo lo posible las capas internas de los programas de las
+interfaces.
+
+Demostración de uso del patrón \textbf{controlador:}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/patterns/controller.jpg}
+    \caption{Demostración de uso del patrón controlador}
+    \label{fig:controller}
+\end{figure}
+\includegraphics[width=0.6\textwidth]{images/patterns/controller.jpg}
+
+En la imagen anterior se demuestra el uso del patrón controlador pues la
+clase ``CasoController'' entre otras señaladas independizan las
+interfaces con acciones que hay que hacer, además de que separan en la
+medida de lo posible las capas internas de la programación de la
+aplicación de su interfaz.
+
+
+
 
 \subsection{Patrones GoF}
 En el año 1994, apareció el libro ``Design Patterns: Elements of Reusable Object Oriented Sofware'' escrito por los ahora famosos Gang of Four (Pandilla de los cuatro) integrada por Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides. Estos recopilaron y documentaron 23 patrones de diseño aplicados usualmente por expertos diseñadores de software orientado a objetos. Desde luego ellos no son los inventores ni los únicos involucrados, pero luego de la publicación de ese libro empezó a difundirse con más fuerza la idea de patrones de diseño. Se distinguen tres tipos de patrones GoF: patrones de comportamiento, patrones creacionales y patrones estructurales \citep{giraldo2011disenosoft}.
 
-\subsubsection{Patrones de comportamiento} Definen la comunicación e iteración entre los objetos de un sistema. El propósito de este tipo de patrón es reducir el acoplamiento entre los objetos.
-\paragraph{ Abstract Factory:} Permite trabajar con objetos de distintas familias de manera que las familias no se mezclen entre sí. Además, hace transparente el tipo de familia concreta que se esté usando.
-\paragraph{ Builder:} Abstrae el proceso de creación de un objeto complejo, centralizando dicho proceso en un único punto.
-\paragraph{ Factory Method:} Centraliza en una clase constructora la creación de objetos de un subtipo de un tipo determinado, ocultando al usuario la casuística para elegir el subtipo que crear.
-\paragraph{ Prototype:} Crea nuevos objetos clonándolos de una instancia ya existente.
-\paragraph{ Singleton:} Garantiza la existencia de una única instancia para una clase y la creación de un mecanismo de acceso global a dicha instancia.
+\paragraph{Patrón único \emph{(singleton)}:}
+Garantiza que una clase sólo tenga una instancia, y proporciona un punto de acceso global a ella.\\
 
-\subsubsection{Patrones creacionales} Tratan con las formas de crear instancias de objetos. El objetivo de estos patrones es de abstraer el proceso de instanciación y ocultar los detalles de cómo los objetos son creados o inicializados.
+Demostración de uso del patrón \textbf{único:}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/patterns/autowired.png}
+    \caption{Demostración de uso del patrón único}
+    \label{fig:singleton}
+\end{figure}
+En la imagen se muestra como se inyecta una instancia única de varios objetos que se podrán usar en una clase controladora para tenerlos como punto de acceso global a ella.
+\subsubsection{Patrones creacionales:} Tratan con las formas de crear instancias de objetos. El objetivo de estos patrones es de abstraer el proceso de instanciación y ocultar los detalles de cómo los objetos son creados o inicializados.
 \paragraph{ Adapter:} Adapta una interfaz para que pueda ser utilizada por una clase que de otro modo no podría utilizarla.
 \paragraph{ Bridge:} Desacopla una abstracción de su implementación.
 \paragraph{ Compositive:}  Permite tratar objetos compuestos como si se tratara de uno simple.
@@ -27,7 +75,7 @@ En el año 1994, apareció el libro ``Design Patterns: Elements of Reusable Object
 \paragraph{ Flyweigth:}  Reduce la redundancia cuando gran cantidad de objetos poseen idéntica información.
 \paragraph{ Proxy:} Mantiene un representante de un objeto.
 
-\subsubsection*{Patrones estructurales} Describen cómo clases y objetos pueden ser combinados para formar grandes estructuras y proporcionar nuevas funcionalidades. Estos objetos adicionados pueden ser incluso objetos simples u objetos compuestos.
+\subsubsection*{Patrones estructurales:} Describen cómo clases y objetos pueden ser combinados para formar grandes estructuras y proporcionar nuevas funcionalidades. Estos objetos adicionados pueden ser incluso objetos simples u objetos compuestos.
 \paragraph{ Chain of responsability:} Permite establecer la línea que deben llevar los mensajes para que los objetos realicen la tarea indicada.
 \paragraph{ Command:} Permite encapsular una operación en un objeto, permitiendo ejecutar dicha operación sin necesidad de conocer el contenido de la misma.
 \paragraph{ Interpreter:}  Dado un lenguaje, define una gramática para dicho lenguaje, así como las herramientas necesarias para interpretarlo.
