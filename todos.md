@@ -106,3 +106,4 @@
 - [ ] Resumen
 
 - [ ] Investigar norma de citación y redacción (Norma APA)
+- [x] Imagen fases XP más pequeña
