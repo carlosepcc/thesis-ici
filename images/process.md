@@ -27,6 +27,14 @@ graph TD
 
 ```mermaid
 pie showData
+    title Resultado de las pruebas unitarias
+    "Satisfactorias" : 24
+    "No satisfactorias" : 4
+
+```
+```mermaid
+
+pie showData
     title Resultado de las pruebas de sistema
     "Satisfactorias" : 24
     "No satisfactorias" : 4

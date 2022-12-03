@@ -83,15 +83,15 @@
     - [ ] De seguridad
     - [ ] De usabilidad
 
-## Señalamientos de predefensa
+## Señaladas en predefensa, por la oponencia y ayuda externa.
 
 - [ ] Tiempo estimado y tiempo real
 - [ ] Mal traducción de RUP
 - [ ] Concordancia
 - [ ] Abuso de mayúsculas
 - [ ] Prototipos en HU
-- [ ] Conceptos de sistema web, app, web, etc, no
-- [ ] Conceptos interrelacionados
+- [x] Conceptos de sistema web, app, web, etc, no
+- [x] Conceptos interrelacionados
 - [ ] Revisar el índice, referencias en el índice
 - [x] Estudio del arte (typo)
 - [ ] Resumen 
@@ -99,11 +99,53 @@
   - [ ] Los métodos no son importantes ahí
 - [ ] Conclusiones parcicales
 - [ ] Se puede adaptar a otras facultades
-
-
-
-## Señalamientos oponente
 - [ ] Resumen
-
+- [ ] Conclusiones parciales faltantes
+- [ ] Justificación de selección de metodología
+- [ ] Matriz de trazabilidad
+- [ ] - Pruebas de aceptación
+- [x] No mezclar patrón CRUD Agrupado
+- [x] Descripción del negocio
 - [ ] Investigar norma de citación y redacción (Norma APA)
 - [x] Imagen fases XP más pequeña
+
+### Fumero
+- [x] Uso de los patrones en la solución
+- [ ] Uso de las herramientas en la solución
+- [ ] Pruebas de sistema
+- [ ] > Carlos Enrique:
+# Tareas pendientes
+
+## Señaladas en predefensa, por la oponencia y ayuda externa.
+
+- [ ] Tiempo estimado y tiempo real
+- [ ] Mal traducción de RUP
+- [ ] Concordancia
+- [ ] Abuso de mayúsculas
+- [ ] Prototipos en HU
+- [x] Conceptos de sistema web, app, web, etc, no
+- [x] Conceptos interrelacionados
+- [ ] Revisar el índice, referencias en el índice
+- [x] Estudio del arte (typo)
+- [ ] Resumen 
+  - [ ] Resultados, cantidad de funcionalidades, requisitos, pruebas
+  - [ ] Los métodos no son importantes ahí
+- [ ] Conclusiones parcicales
+- [ ] Se puede adaptar a otras facultades
+- [ ] Resumen
+- [ ] Conclusiones parciales faltantes
+- [ ] Justificación de selección de metodología
+- [ ] Matriz de trazabilidad
+- [ ] - Pruebas de aceptación
+- [x] No mezclar patrón CRUD Agrupado
+- [x] Descripción del negocio
+- [ ] Investigar norma de citación y redacción (Norma APA)
+- [x] Imagen fases XP más pequeña
+
+### Fumero
+- [ ] Uso de los patrones en la solución
+- [ ] Uso de las herramientas en la solución
+- [ ] Pruebas de sistema
+- [ ] Pruebas unitarias
+  -[ ] Resumen de los resultados (Descripción de los errors  y pruebas satisfactorias y cómo se solucionaron los errores)
+
