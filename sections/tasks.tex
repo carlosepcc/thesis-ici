@@ -7,44 +7,47 @@ A continuación, se muestran algunas de las tareas de ingeniería a realizar:
 Para su desarrollo durante la primera iteración se acuerda la selección de las \ac{hu} con mayor prioridad,respetando la opinión del cliente, cuya suma del tiempo total estimado de desarrollo no exceda el tiempo acordado para las iteraciones ( 2 semanas ). A continuación los nombres de algunas de las \ac{hu} seleccionadas para la iteración junto a las tareas que, una vez implementadas satisfactoriamente, dan paso a la realización de las pruebas de aceptación:
 
 \begin{itemize}
-\item \textbf{HU4:} Gestionar denuncias
-\item \textbf{HU5:} Gestionar resoluciones decanales
-\item \textbf{HU7:} Gestionar comisiones
-\item \textbf{HU8:} Gestionar declaraciones
-\item \textbf{HU9:} Gestionar casos disciplinarios
+   \item \textbf{HU3:} Listar denuncias
+   \item \textbf{HU4:} Crear una denuncia
+   \item \textbf{HU5:} Modificar una denuncia
+   \item \textbf{HU6:} Eliminar denuncias
+   \item \textbf{HU8:} Archivar denuncias
+   \item \textbf{HU9:} Listar resoluciones decanales
+   \item \textbf{HU10:} Crear una resolución decanal
+   \item \textbf{HU11:} Modificar una resolución decanal
+   \item \textbf{HU12:} Listar comisiones
+   \item \textbf{HU13:} Crear comisiones
+   \item \textbf{HU14:} Modificar una comisión
+   \item \textbf{HU15:} Eliminar comisiones
+   \item \textbf{HU17:} Listar declaraciones
+   \item \textbf{HU18:} Crear declaración
+   \item \textbf{HU19:} Modificar declaración
+   \item \textbf{HU20:} Eliminar declaraciones
+   \item \textbf{HU22:} Crear caso disciplinario
+   \item \textbf{HU23:} Listar casos disciplinarios
+   \item \textbf{HU24:} Modificar caso disciplinario
 \end{itemize}
-% \begin{tasks}
 
-% 	\item Implementar: Crear denuncia.
-% 	\item Implementar: Modificar denuncia.
-% 	\item Implementar: Eliminar denuncia.
-% 	\item Implementar: Consultar denuncia.
-% 	\item Implementar: Listar denuncias.
-% 	\item Implementar: Buscar denuncia.
-% 	\item Implementar: Exportar denuncia.
-% 	\item Implementar: Autenticar usuario.
-% 	\item Implementar: Asignar rol a usuario.
-% 	\item Implementar: Crear rol
-% 	\item Implementar: Modificar rol.
-% 	\item Implementar: Eliminar rol.
-% 	\item Implementar: Listar roles.
-% 	\item Implementar: Crear resolución decanal
-% 	\item Implementar: Listar resoluciones decanales.
-% 	\item Implementar: Consultar resolución decanal.
-% 	\item Implementar: Exportar resolución decanal.
-	
-% \end{tasks}
+
 
 
 \subsection{Iteración II}
 Para su desarrollo durante la segunda iteración se acuerda la selección de las \ac{hu} con prioridad de segundo orden,respetando la opinión del cliente, cuyo cantidad no exceda la el número de \ac{hu} que se pudieron desarrollar y probar exitosamente en la iteración anterior, lo que se conoce como velocidad de desarrollo. Luego se verifica que las cantidad de tareas total asociadas a las \ac{hu} no excede tampoco la velocidad de desarrollo de la iteración anterior. Y de esta manera se procede con todas las iteraciones siguientes. A continuación los nombres de algunas de las \ac{hu} seleccionadas para la iteración junto a las tareas que, una vez implementadas satisfactoriamente, dan paso a la realización de las pruebas de aceptación:
 
 \begin{itemize}
-\item \textbf{HU1:} Autenticar usuario
-\item \textbf{HU2:} Listar usuarios
-\item \textbf{HU12:} Gestionar roles
-\item \textbf{HU3:} Asignar rol a usuario
+   \item \textbf{HU1:} Autenticar Usuario
+   \item \textbf{HU2:} Asignar rol a usuario
+   \item \textbf{HU7:} Buscar denuncias
+   \item \textbf{HU16:} Buscar comisiones
+   \item \textbf{HU21:} Buscar declaración
+   \item \textbf{HU25:} Buscar caso disciplinario
+   \item \textbf{HU27:} Listar roles
+   \item \textbf{HU28:} Crear roles
+   \item \textbf{HU29:} Modificar roles
+   \item \textbf{HU30:} Eliminar roles
+   \item \textbf{HU31:} Buscar roles
 \end{itemize}
+
 %\begin{table}[]
 %\centering
 %\begin{tabular}{|ll|lll}
@@ -73,38 +76,38 @@ Para su desarrollo durante la segunda iteración se acuerda la selección de las \
 %\end{tabular}
 %\end{table}
 \begin{engineeringtask}[t:engtask1] % label in brackets
-    \engtaskuserstory{1}
-    \engtaskname{Autenticar usuario}
-    \engtasktype{Desarrollo}
-    \engtaskpointestimation{1} % días ideales de desarrollo
-    \engtaskstartdate{16}{9}{2022} % day, month, year
-    \engtaskenddate{17}{9}{2022}
-    \engtaskprogrammer{\authorA}
-    \engtaskdescription{Descripción: Implementar la autenticación basada en JSON Web Tokens. Deben enviarse en el token los datos del usuario autenticado:
-    Nombre de usuario: String, Nombre: String, Rol: String, Permisos: String[],}
-    
- \end{engineeringtask}
+   \engtaskuserstory{1}
+   \engtaskname{Autenticar usuario}
+   \engtasktype{Desarrollo}
+   \engtaskpointestimation{1} % días ideales de desarrollo
+   \engtaskstartdate{16}{9}{2022} % day, month, year
+   \engtaskenddate{17}{9}{2022}
+   \engtaskprogrammer{\authorA}
+   \engtaskdescription{Descripción: Implementar la autenticación basada en JSON Web Tokens. Deben enviarse en el token los datos del usuario autenticado:
+      Nombre de usuario: String, Nombre: String, Rol: String, Permisos: String[],}
 
- \begin{engineeringtask}[t:engtask1.2] % label in brackets
-    \engtaskuserstory{1}
-    \engtaskname{Manejo de sesión}
-    \engtasktype{Desarrollo}
-    \engtaskpointestimation{1} % días ideales de desarrollo
-    \engtaskstartdate{17}{9}{2022} % day, month, year
-    \engtaskenddate{18}{9}{2022}
-    \engtaskdescription{Implementar la persistencia y cierre de sesión usando una API web como Local Storage o Cookies para almacenar y recuperar los datos de una sesión iniciada, así como para eliminarlos cuando el usuario decide cerrar la sesión.}
-    \engtaskprogrammer{\authorA}
- \end{engineeringtask}
- % \begin{developmenttask}[t:devtask1] % label in brackets
- %     \devtaskuserstory{4}
- %     \devtaskname{Implementar: Autenticar usuario}
- %     \devtasktype{Desarrollo}
- %     \devtaskpointestimation{1}
- %     \devtaskstartdate{1}{10}{2022} % day, month, year
- %     \devtaskenddate{2}{10}{2022}
- %     \devtaskdescription{La autenticación debe funcionar usando el servicio de autenticación de la universidad.}
- %     \devtaskprogrammer{\authorA}
- %  \end{developmenttask}
+\end{engineeringtask}
+
+\begin{engineeringtask}[t:engtask1.2] % label in brackets
+   \engtaskuserstory{1}
+   \engtaskname{Manejo de sesión}
+   \engtasktype{Desarrollo}
+   \engtaskpointestimation{1} % días ideales de desarrollo
+   \engtaskstartdate{17}{9}{2022} % day, month, year
+   \engtaskenddate{18}{9}{2022}
+   \engtaskdescription{Implementar la persistencia y cierre de sesión usando una API web como Local Storage o Cookies para almacenar y recuperar los datos de una sesión iniciada, así como para eliminarlos cuando el usuario decide cerrar la sesión.}
+   \engtaskprogrammer{\authorA}
+\end{engineeringtask}
+% \begin{developmenttask}[t:devtask1] % label in brackets
+%     \devtaskuserstory{4}
+%     \devtaskname{Implementar: Autenticar usuario}
+%     \devtasktype{Desarrollo}
+%     \devtaskpointestimation{1}
+%     \devtaskstartdate{1}{10}{2022} % day, month, year
+%     \devtaskenddate{2}{10}{2022}
+%     \devtaskdescription{La autenticación debe funcionar usando el servicio de autenticación de la universidad.}
+%     \devtaskprogrammer{\authorA}
+%  \end{developmenttask}
 
 
 % \begin{developmenttask}[t:devtask1] % label in brackets
@@ -122,7 +125,10 @@ Para su desarrollo durante la segunda iteración se acuerda la selección de las \
 Para su desarrollo durante la terce iteración se acuerda la selección de las \ac{hu} con prioridad de tercer orden,respetando la opinión del cliente, cuyo cantidad no exceda la velocidad de desarrollo. Luego se verifica que las cantidad de tareas total asociadas a las \ac{hu} no excede tampoco la velocidad de desarrollo de la iteración anterior. Y de esta manera se procede con todas las iteraciones siguientes. A continuación los nombres de algunas de las \ac{hu} seleccionadas para la iteración junto a las tareas que, una vez implementadas satisfactoriamente, dan paso a la realización de las pruebas de aceptación:
 
 \begin{itemize}
-\item \textbf{HU6:} Exportar resolución decanal
-\item \textbf{HU10:} Exportar conclusión de la resolución
-\item \textbf{HU11:} Exportar resolución de caso
+   \item \textbf{HU26:} Cerrar caso disciplinario
+   \item \textbf{HU32:} Exportar resoluciones decanales
+   \item \textbf{HU33:} Exportar denuncias
+   \item \textbf{HU34:} Exportar declaraciones
+   \item \textbf{HU35:} Exportar conclusiones de casos
+   \item \textbf{HU36:} Exportar resoluciones de casos
 \end{itemize}
