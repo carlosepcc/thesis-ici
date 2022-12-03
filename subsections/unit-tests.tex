@@ -4,13 +4,115 @@ Las pruebas unitarias son una forma de comprobar que un fragmento de código func
 Para la aplicación de las pruebas unitarias a la solución se empleó el framework JUnit el cual permite realizar la ejecución de clases Java de manera controlada, para poder evaluar si el funcionamiento de cada uno de los métodos de la clase se comporta como se espera. Es decir, en función de algún valor de entrada se evalúa el valor de retorno esperado; si la clase cumple con la especificación, entonces JUnit devolverá que el método de la clase pasó exitosamente la prueba; en caso de que el valor esperado sea diferente al que regresó el método durante la ejecución, JUnit devolverá un fallo en el método correspondiente.
 \begin{figure}[htp]
 	\centering
-	\includegraphics{images/test/unit-tests.jpg}
-	\caption{Resultado de la ejecución de pruebas unitarias en el código fuente de CDIS.}
-	\label{fig:unit-tests}
+	\includegraphics[width=0.8\textwidth]{images/test/PU1.jpg}
+	\caption{Resultado de la ejecución de pruebas unitarias en el código fuente de CDIS. parte 1.}
+	\label{fig:pu1}
 \end{figure}
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=1\textwidth]{images/test/unit-tests-coverage.png}
-	\caption{Gráfica que muestra el resultado de la ejecución de pruebas unitarias en el código fuente de CDIS.}
-	\label{fig:unit-tests-coverage}
+	\includegraphics[width=0.8\textwidth]{images/test/PU2.jpg}
+	\caption{Resultado de la ejecución de pruebas unitarias en el código fuente de CDIS. parte 2.}
 \end{figure}
+
+Se realizaron 39 pruebas unitarias al código de las cuales 1 fue
+fallida y se corrigió exitosamente. A continuación, se muestra el código antes
+de corregir el error detectado en la figura \ref{fig:pu1}:
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/before-error.jpg}
+	\caption{Método crearComisión con error}
+\end{figure}
+
+Como se puede apreciar se está intentando crear una comisión, pero por
+algún motivo la lógica del código no fue bien planteada y terminamos
+recibiendo una excepción causada a raíz de que para crear una comisión
+disciplinaria hace falta también asignarle una resolución que la
+contenga. La solución a dicho problema se encuentra en la imagen
+siguiente:
+\clearpage
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/after-error.jpg}
+	\caption{Método crearComisión corregido}
+\end{figure}
+
+De esta forma garantizamos que una resolución contiene la comisión que
+estamos creando y esta se puede guardar con normalidad en la base de
+datos.
+
+Ahora se mostrarán algunas imágenes de otras pruebas exitosas:
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/E1.jpg}
+	\caption{prueba para crearResolución()}
+\end{figure}
+
+Se hace una prueba para crearResolución(): Se comprueba que la
+creación de una resolución sea exitosa después de asignarle una comisión
+disciplinaria
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/E2.jpg}
+	\caption{prueba para modificarResolucion()}
+\end{figure}
+
+Se hace una prueba para modificarResolucion(): Se actualiza la
+información de una resolución ya creada buscando fallas
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/E3.jpg}
+	\caption{prueba para listarResolucion()}
+\end{figure}
+
+Se hace una prueba para listarResolucion(): Se llaman objetos
+de la base de datos para guardarlos en un listado de objetos
+de tipo: Resolucion
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/E4.jpg}
+	\caption{prueba para modificarComision()}
+\end{figure}
+
+Se hace una prueba para modificarComision(): Se actualiza la
+información de una comisión seleccionada buscando fallas
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/E5.jpg}
+	\caption{prueba para mostrarComisionl()}
+\end{figure}
+
+Se hace una prueba para mostrarComisionl(): Se llama a la
+base de datos para obtener objetos de tipo: Comision
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/E6.jpg}
+	\caption{prueba para crearDenuncia()}
+\end{figure}
+
+Se hace una prueba para crearDenuncia(): Se crea una denuncia,
+este es uno de los métodos más importantes y base de la aplicación
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/E7.jpg}
+	\caption{prueba para mostrarUsuarios()}
+\end{figure}
+
+Se hace una prueba para mostrarUsuarios(): Se comprueba que todos
+los usuarios se muestren correctamente
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/E8.jpg}
+	\caption{prueba para modificarRol()}
+\end{figure}
+
+se hace un test para modificarRol(): Se comprueba el correcto
+funcionamiento en la actualización de los atributos del objeto de prueba de tipo: Rol

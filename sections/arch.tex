@@ -1,0 +1,15 @@
+\section{Arquitectura de la propuesta de solución}
+Para garantizar niveles elevados de calidad de software durante el desarrollo es necesario definir desde el comienzo una arquitectura que describa sus principios fundamentales, garantizando robustez y escalabilidad.
+La arquitectura de software define la estructura del sistema, la cual está constituida por componentes, con funciones específicas, que interactúan entre sí \citep{navarro2018arquitectura}.
+\subsection{Patrón Arquitectónico}
+Para el desarrollo de la propuesta de solución se utiliza el patrón arquitectónico \ac{mvc} debido a que este separa la lógica de negocio de la interfaz de usuario en tres capas diferentes, cada una con funcionalidades bien definidas, reduciendo esfuerzo en la implementación de la aplicación y garantizando una mejor organización del trabajo.
+\subsubsection*{Partes del \ac{mvc}:}
+\paragraph{ Modelo:} Contiene una representación de los datos que maneja el sistema, su lógica de negocio, y sus mecanismos de persistencia.
+\paragraph{ Vista:} También conocida como interfaz de usuario, compone la información que se envía al cliente y los mecanismos de interacción con este.
+\paragraph{ Controlador:} Actúa como intermediario entre el Modelo y la Vista, gestionando el flujo de información entre ellos y las transformaciones para adaptar los datos a las necesidades de cada uno.\\
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/patterns/controller.jpg}
+	\caption{Ejemplo de la implmentación de una clase controladora en el código del sistema}
+	\label{fig:arch-controller}
+\end{figure}

@@ -14,9 +14,13 @@ Este patrón implica que un objeto debe responsabilizarse de crear otros:
     \item O si contiene los datos para crear los del tipo creados.
 \end{itemize}
 
-Demostración de uso de patrón \textbf{creador:}
-
-\includegraphics[width=0.6\textwidth]{images/patterns/creator.jpg}
+Ejemplo de uso de patrón creador en la implementación de la propuesta de solución:
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/patterns/creator.jpg}
+    \caption{Demostración de uso del patrón controlador}
+    \label{fig:creator}
+\end{figure}
 
 En la imagen anterior se demuestra el uso del patrón creador pues la
 clase ``CasoService'' hace bastante uso por medio de los métodos que
@@ -33,14 +37,13 @@ Estos controladores tienen que ser lo más pequeños posible y numerosos,
 aislando todo lo posible las capas internas de los programas de las
 interfaces.
 
-Demostración de uso del patrón \textbf{controlador:}
-\begin{figure}[h]
+Ejemplo de uso del patrón controlador en la implementación de la propuesta de solución: \\
+\begin{figure}[htp]
     \centering
     \includegraphics[width=0.6\textwidth]{images/patterns/controller.jpg}
     \caption{Demostración de uso del patrón controlador}
     \label{fig:controller}
 \end{figure}
-\includegraphics[width=0.6\textwidth]{images/patterns/controller.jpg}
 
 En la imagen anterior se demuestra el uso del patrón controlador pues la
 clase ``CasoController'', entre otras señaladas, independizan las
@@ -54,10 +57,12 @@ aplicación de su interfaz.
 \subsection{Patrones GoF}
 En el año 1994, apareció el libro ``Design Patterns: Elements of Reusable Object Oriented Sofware'' escrito por los ahora famosos \emph{Gang of Four} (Pandilla de los cuatro) integrada por Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides. Estos recopilaron y documentaron 23 patrones de diseño aplicados usualmente por expertos diseñadores de software orientado a objetos. Desde luego ellos no son los inventores ni los únicos involucrados, pero luego de la publicación de ese libro empezó a difundirse con más fuerza la idea de patrones de diseño. Se distinguen tres tipos de patrones GoF: patrones de comportamiento, patrones creacionales y patrones estructurales \citep{giraldo2011disenosoft}.
 
-\paragraph{Patrón único \emph{(singleton)}:}
+\paragraph{Único \emph{(singleton)}:}
 Garantiza que una clase sólo tenga una instancia, y proporciona un punto de acceso global a ella.\\
+\paragraph{ Decorador \emph{(decorator)}:} Añade funcionalidad a una clase dinámicamente. De esta manera, instancias aisladas pueden poseer funcionalidades extra sólo en tiempo de ejecución.
+\paragraph{ Fachada \emph{(facade)}:} Provee de una interfaz unificada simple para acceder a una interfaz o grupo de interfaces de un subsistema.
 
-Demostración de uso del patrón \textbf{único:}
+Ejemplo de uso del patrón único, decorador y fachada en la implementación de la solución:\\
 
 \begin{figure}[h]
     \centering
@@ -67,23 +72,19 @@ Demostración de uso del patrón \textbf{único:}
 \end{figure}
 En la imagen se muestra como se inyecta una instancia única de varios objetos que se podrán usar en una clase controladora para tenerlos como punto de acceso global a ella.
 \subsubsection{Patrones creacionales:} Tratan con las formas de crear instancias de objetos. El objetivo de estos patrones es de abstraer el proceso de instanciación y ocultar los detalles de cómo los objetos son creados o inicializados.
-\paragraph{ Adapter:} Adapta una interfaz para que pueda ser utilizada por una clase que de otro modo no podría utilizarla.
-\paragraph{ Bridge:} Desacopla una abstracción de su implementación.
-\paragraph{ Compositive:}  Permite tratar objetos compuestos como si se tratara de uno simple.
-\paragraph{ Decorator:} Añade funcionalidad a una clase dinámicamente.
-\paragraph{ Facade:} Provee de una interfaz unificada simple para acceder a una interfaz o grupo de interfaces de un subsistema.
-\paragraph{ Flyweigth:}  Reduce la redundancia cuando gran cantidad de objetos poseen idéntica información.
-\paragraph{ Proxy:} Mantiene un representante de un objeto.
-
+\paragraph{Representante \emph{(proxy)}:} Mantiene un representante de un objeto.
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/patterns/proxy.png}
+    \caption{Uso del patrón Proxy en la implementación de la solución}
+\end{figure}
 \subsubsection*{Patrones estructurales:} Describen cómo clases y objetos pueden ser combinados para formar grandes estructuras y proporcionar nuevas funcionalidades. Estos objetos adicionados pueden ser incluso objetos simples u objetos compuestos.
-\paragraph{ Chain of responsability:} Permite establecer la línea que deben llevar los mensajes para que los objetos realicen la tarea indicada.
-\paragraph{ Command:} Permite encapsular una operación en un objeto, permitiendo ejecutar dicha operación sin necesidad de conocer el contenido de la misma.
-\paragraph{ Interpreter:}  Dado un lenguaje, define una gramática para dicho lenguaje, así como las herramientas necesarias para interpretarlo.
-\paragraph{ Iterator:}  Proporciona un modo de acceder secuencialmente a los elementos de un objeto agregado sin exponer su representación interna.
-\paragraph{ Mediator:}  Define un objeto para encapsular la interacción en un conjunto de objetos. Promueve un bajo acoplamiento al evitar que los objetos se refieran unos a otros explícitamente, y permite variar la interacción entre ellos de forma independiente.
-\paragraph{ Memento:}  Representa y externaliza el estado interno de un objeto sin violar la encapsulación, de forma que éste puede volver a dicho estado más tarde.
-\paragraph{ Observer:}  Define una dependencia de uno-a-muchos entre objetos, de forma que cuando un objeto cambie de estado se notifique y actualicen automáticamente todos los objetos que dependen de él.
-\paragraph{ State:} Permite que un objeto modifique su comportamiento cada vez que cambia su estado interno. Parecerá que cambia la clase del objeto.
-\paragraph{ Strategy:} Define una familia de algoritmos, encapsula uno de ellos y los hace intercambiables. Permite que un algoritmo varíe independientemente de los clientes que lo usan.
-\paragraph{ Template Method:} Define en una operación el esqueleto de un algoritmo, delegando en las subclases algunos de sus pasos. Permite que las subclases redefinan ciertos pasos del algoritmo sin cambiar su estructura.
-\paragraph{ Visitor:} Representa una operación sobre los elementos de una estructura de objetos. Permite definir una nueva operación sin cambiar las clases de los elementos sobre los que opera.
+Proporciona un modo de acceder secuencialmente a los elementos de un objeto agregado sin exponer su representación interna.
+Representa y externaliza el estado interno de un objeto sin violar la encapsulación, de forma que éste puede volver a dicho estado más tarde.
+\paragraph{ Observador \emph{(observer)}:}  Define una dependencia de uno-a-muchos entre objetos, de forma que cuando un objeto cambie de estado se notifique y actualicen automáticamente todos los objetos que dependen de él.
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/patterns/watch.png}
+    \caption{Uso del patrón Observador en la implementación de la solución}
+\end{figure}
+\paragraph{ Estado \emph{(state)}:} Permite que un objeto modifique su comportamiento cada vez que cambia su estado interno. Parecerá que cambia la clase del objeto.
