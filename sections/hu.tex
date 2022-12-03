@@ -98,18 +98,30 @@ Los títulos de las \ac{hu} generadas son:
 \end{enumerate}
 A continuación se presentan las \ac{hu} con mayor prioridad dentro del negocio, determinadas por el cliente e conjunto con el equipo de desarrollo. El resto se podrán encontrar en la sección de apéndices \ref{app:hu}: Historias de Usuario.
 
+
 \begin{userstory}
-	\storyname{Asignar rol a usuario}
-	\storyuser{Administrador}
-	\storyiter{1}
+	\storyname{ Crear una denuncia }
+	\storyuser{ Usuario }
+	\storyiter{ 1 }
 	\storypriority{ Alta }
-	\storyrisk{ Bajo }
-	\storypoints{\hpa}
-	\storyprogrammer{\authorA }
-	\storydescription{Como administrador quiero asignar un rol a un usuario para que pueda realizar las acciones que le corresponden.}
-	\storyobservation{}
-	\storyinterface{
-		% Formulario de asignación de rol:\\
-		% \includegraphics[scale=0.5]{images/prototypes/cdis-assignrole-capture.png}
-	}
+	\storyrisk{ Medio }
+	\storypoints{ 0.4 }
+	\storyprogrammer{ \authorA }
+	\storydescription{ Como Usuario quiero crear una denuncia para notificar rápidamente al decano de una indisciplina cometida por uno o varios estudiantes }
+	\storyobservation{ }
+	\storyinterface{ \includegraphics[width=0.5\textwidth]{images/prototypes/cdis-create-denuncia-capture.png} }
 \end{userstory}
+
+% Para crear un caso disciplinario basta con asignar una comisión a una denuncia pendiente:
+% \begin{userstory}
+% 	\storyname{ Crear caso disciplinario }
+% 	\storyuser{ Decano }
+% 	\storyiter{ 1 }
+% 	\storypriority{ Alta }
+% 	\storyrisk{ Medio }
+% 	\storypoints{ 0.4 }
+% 	\storyprogrammer{ \authorA }
+% 	\storydescription{ Como Decano quiero crear caso disciplinario. }
+% 	\storyobservation{ }
+% 	\storyinterface{ \includegraphics[width=0.5\textwidth]{images/prototypes/cdis-create-caso.png} }
+% \end{userstory}
