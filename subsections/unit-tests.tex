@@ -1,40 +1,39 @@
 \subsection{Pruebas unitarias}
 \label{ss:unit-tests}
 El nivel de pruebas de unidad se enfoca en cada componente de forma individual o clases de objetos, lo que garantiza que funcione debidamente como unidad, de ahí su nombre. Estas pruebas deben enfocarse en comprobar la funcionalidad de objetos o métodos \citep{sommerville2011software}. \ac{xp} plantea la realización de pruebas unitarias continuas, frecuentemente repetidas y automatizadas, incluyendo pruebas de regresión, y aconseja escribir el código de la prueba antes de la codificación \citep{kniberg2007scrumyxp}.\\
+\subsubsection*{Pruebas automatizadas}
+Las pruebas automatizadas se han convertido en una de las técnicas más adoptadas en el proceso de pruebas de software, ayuda a acelerar el lanzamiento al mercado al tiempo que proporciona amplio margen para que los profesionales de las pruebas trabajen en la búsqueda de casos de prueba críticos. Estas pruebas no solo mejoran la confiabilidad de su aplicación, sino que también aceleran el proceso de prueba, mejoran la cobertura de prueba y brindan confianza a los evaluadores para una prueba de mejor calidad del producto \citep{acanda2018cdis}.
 Para la aplicación de las pruebas unitarias a la solución se empleó el marco JUnit el cual permite realizar la ejecución de clases Java de manera controlada, para poder evaluar si el funcionamiento de cada uno de los métodos de la clase se comporta como se espera. Es decir, en función de algún valor de entrada se evalúa el valor de retorno esperado; si la clase cumple con la especificación, entonces JUnit devolverá que el método de la clase pasó exitosamente la prueba; en caso de que el valor esperado sea diferente al que regresó el método durante la ejecución, JUnit devolverá un fallo en el método correspondiente.
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/test/PU1.jpg}
-	\caption{Resultado de la ejecución de pruebas unitarias en el código fuente de CDIS. parte 1.}
+	\caption{Resultado de la ejecución de pruebas unitarias en el código fuente de la solución. Parte 1.}
 	\label{fig:pu1}
 \end{figure}
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/test/PU2.jpg}
-	\caption{Resultado de la ejecución de pruebas unitarias en el código fuente de CDIS. parte 2.}
+	\caption{Resultado de la ejecución de pruebas unitarias en el código fuente de la solución. Parte 2.}
 \end{figure}
 
-Se realizaron 39 pruebas unitarias al código de las cuales 1 fue
-fallida y se corrigió exitosamente. A continuación, se muestra el código antes
-de corregir el error detectado en la figura \ref{fig:pu1}:
+Se realizaron 39 pruebas unitarias al código de las cuales 8 fueron
+fallidas y se corrigieron exitosamente. A continuación, en la figura \ref{fig:before-error}, se muestra el un fragmento de código en el estado previo a la corrección de uno de los errores detectados:
 
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/test/before-error.jpg}
 	\caption{Método crearComisión con error}
+	\label{fig:before-error}
 \end{figure}
 
-Como se puede apreciar se está intentando crear una comisión, pero por
-algún motivo la lógica del código no fue bien planteada y terminamos
-recibiendo una excepción causada a raíz de que para crear una comisión
-disciplinaria hace falta también asignarle una resolución que la
-contenga. La solución a dicho problema se encuentra en la imagen
-siguiente:
+Como se puede apreciar se está intentando crear una comisión, pero la lógica del código no fue bien planteada y se terminón recibiendo una excepción ya que para crear una comisión
+disciplinaria se hace necesario asignarle una resolución que la contenga. La solución a dicho problema se encuentra en la siguiente figura \ref{fig:after-error}:
 \clearpage
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/test/after-error.jpg}
 	\caption{Método crearComisión corregido}
+	\label{fig:after-error}
 \end{figure}
 
 De esta forma garantizamos que una resolución contiene la comisión que

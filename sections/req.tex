@@ -4,70 +4,68 @@
 En ingeniería de software, los \ac{rf} definen un sistema o sus componentes; describen la función que un software debe realizar, ya sean cálculos, manipulación de datos, procesos de negocios, entre otros.
 Ayudan además a capturar los comportamientos planificados para un sistema, este comportamiento puede ser expresado como una función, servicio o tarea que un software debe realizar \citep{pressman2005software}. A continuación, se exponen los diferentes \ac{rf} planteados por el usuario:
 \begin{RF}
-    \item Autenticar Usuario
-    \item Asignar rol a usuario
-    \\
-    \item Listar denuncias %w
-    \item Crear denuncia
-    \item Modificar denuncia
-    \item Eliminar denuncia
-    \item Buscar denuncia
-    %\item Exportar tabla de denuncias
-    \item Exportar denuncia
-    %\item Imprimir listado de denuncias
-    \\
-    \item Listar resoluciones decanales %w
-    \item Crear resolución decanal %w
-    \item Modificar resolución decanal
-    \item Eliminar resolución decanal %w
-    \item Exportar resolución decanal
-    \\
-    \item Listar comisiones %w
-    \item Crear comisión %w
-    \item Modificar comisión
-    \item Eliminar comisión %w
-    \item Buscar comisión %w
-    \\
-    \item Listar declaraciones
-    \item Crear declaración
-    \item Modificar declaración
-    \item Eliminar declaración
-    \item Buscar declaración
-    % \item Exportar declaración
-    %\item Exportar tabla de declaraciones
-    \\
-    \item Crear caso disciplinario
-    \item Listar casos disciplinarios
-    \item Modificar caso disciplinario
-    \item Buscar caso disciplinario
-    \\
-    \item Exportar resolución de caso
-    \item Exportar conclusión de la comisión
-    \\
-    \item Listar roles
-    \item Crear rol
-    \item Modificar rol
-    \item Eliminar rol
-    \item Buscar rol
-    %\item Exportar tabla de usuarios
+    \item Autenticar Usuario (Prioridad Alta)
+    \item Asignar rol a usuario (Prioridad Baja)
+
+    \item Listar denuncias (Prioridad Alta)
+    \item Crear una denuncia (Prioridad Alta)
+    \item Modificar una denuncia (Prioridad Alta)
+    \item Eliminar denuncias (Prioridad Alta)
+    \item Buscar denuncias (Prioridad Baja)
+    \item Archivar denuncias (Prioridad Alta)
+
+    \item Listar resoluciones decanales (Prioridad Alta)
+    \item Crear una resolución decanal (Prioridad Alta)
+    \item Modificar una resolución decanal (Prioridad Alta)
+    %\item Eliminar resoluciones decanales (Prioridad Alta)
+
+    \item Listar comisiones (Prioridad Alta)
+    \item Crear comisiones (Prioridad Alta)
+    \item Modificar una comisión (Prioridad Alta)
+    \item Eliminar comisiones (Prioridad Alta)
+    \item Buscar comisiones (Prioridad Baja)
+
+    \item Listar declaraciones (Prioridad Alta)
+    \item Crear declaración (Prioridad Alta)
+    \item Modificar declaración (Prioridad Alta)
+    \item Eliminar declaraciones (Prioridad Alta)
+    \item Buscar declaración (Prioridad Baja)
+
+    \item Crear caso disciplinario (Prioridad Alta)
+    \item Listar casos disciplinarios (Prioridad Alta)
+    \item Modificar caso disciplinario (Prioridad lta)
+    \item Buscar caso disciplinario (Prioridad Baja)
+    \item Cerrar caso disciplinario (Prioridad Media)
+
+    \item Listar roles (Prioridad Baja)
+    \item Crear roles (Prioridad Baja)
+    \item Modificar roles (Prioridad Baja)
+    \item Eliminar roles (Prioridad Baja)
+    \item Buscar roles (Prioridad Baja)
+
+    \item Exportar resoluciones decanales (Prioridad Baja)
+    \item Exportar denuncias (Prioridad Baja)
+    \item Exportar declaraciones (Prioridad Baja)
+    \item Exportar conclusiones de casos (Prioridad Baja)
+    \item Exportar resoluciones de casos (Prioridad Baja)
 \end{RF}
 
 \subsection{Requisitos no funcionales}
 Los \ac{rnf}, como su nombre sugiere, son aquellos requerimientos que no se refieren directamente a las funciones específicas que proporciona el sistema, sino a las propiedades emergentes de este como la fiabilidad, el tiempo de respuesta y la capacidad de almacenamiento. De forma alternativa definen las restricciones del sistema \citep{sommerville2011software}.\\
 Los requisitos no funcionales de la aplicación a desarrollar son:
 \\
-\noindent Usabilidad:
+\noindent \textbf{Usabilidad:}
 \begin{RNF}
     \item La \ac{gui} de la aplicación cliente debe ser intuitiva y fácil de usar por cualquier persona con edad laboral y con conocimientos básicos de trabajo con software, de acuerdo a estándares modernos de diseño de \ac{gui}.
 \end{RNF}
-Hardware y software:
+\textbf{Hardware y software:}
 \begin{RNF}[resume]
     \item El software debe poder funcionar en un servidor con 4GB de \ac{ram} y 10GB de almacenamiento libre.
     \item El cliente del sistema debe ser compatible con las últimas versiones estables de los principales navegadores web: Google Chrome, navegadores basados en \gls{chromium}, Mozilla Firefox y Safari.
     %TODO Seguridad?  \item El usuario debe poder acceder a las funcionalidades del sistema sólo después de estar autenticado.
     % \item El usuario debe poder acceder solamente a las funcionalidades permitidas de acuerdo a su rol en el sistema.
 \end{RNF}
-Diseño e implementación:
+\textbf{Diseño e implementación:}
 \begin{RNF}[resume]
     \item El sistema debe ser accesible a través de una aplicación web cliente.
     \item Se deben usar lenguajes de programación y herramientas com amplio soporte y estabilidad.

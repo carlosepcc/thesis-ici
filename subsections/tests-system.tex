@@ -1,1 +1,20 @@
 \subsection{Pruebas de sistema}
+Esta prueba tiene como objetivo verificar que se han integrado adecuadamente todos los elementos del sistema y que realizan las operaciones apropiadas funcionando como un todo \citep{sommerville2011software}.
+\subsubsection*{Método de prueba de caja negra:}
+Las pruebas de caja negra se centran en los requisitos funcionales del sistema. Con estas pruebas se intentan encontrar funciones incorrectas o ausentes, errores de interfaz, errores en estructuras de datos o en acceso a base de datos externas y errores de rendimiento. Se centran en qué hace el software y no en cómo lo hace \citep{pressman_isw_7ma}.
+Según \citep{pressman_isw_7ma} existen varias técnicas para realizar este tipo de pruebas,
+se seleccionó la técnica partición equivalente, la cual permite comprobar los valores válidos e
+inválidos de las entradas existentes en la aplicación.
+\paragraph*{Partición equivalente:} método que divide el campo de entrada de un programa en clases
+de datos de los que se pueden derivar casos de prueba. Se dirige a la definición de
+casos de prueba que descubran clases de errores, reduciendo así el número total de
+casos de prueba que hay que desarrollar.
+La figura \ref{fig:tests-system-coverage} a continuación muestra el resultado de la aplicación de esta prueba.
+
+\clearpage
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/test/no-conf.png}
+	\caption{No conformidades detectadas}
+	\label{fig:tests-system-coverage}
+\end{figure}
